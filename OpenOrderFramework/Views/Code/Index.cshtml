@@ -1,0 +1,92 @@
+﻿@*@model IEnumerable<OpenOrderFramework.Models.Code>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.CodeListViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>代碼種類：@ViewBag.Code_Kind <small>@Resources.Common.Index</small></h2>
+</div>
+
+<p>
+    @Html.ActionLink(Resources.Common.Create, "Create", new { id = @ViewBag.CompanyID + ',' + @ViewBag.Code_Kind })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().CodeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().CodeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Code1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Code2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Memo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Modify_YN)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Codes) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modify_YN)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreateUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyDateTime)
+        </td>*@
+        <td>
+            @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.Code_Kind + ',' + @item.CodeID }) |
+            @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.Code_Kind + ',' + @item.CodeID }) |
+            @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.Code_Kind + ',' + @item.CodeID })
+        </td>
+    </tr>
+}
+
+</table>

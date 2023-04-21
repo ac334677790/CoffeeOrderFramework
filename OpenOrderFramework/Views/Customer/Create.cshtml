@@ -1,0 +1,256 @@
+﻿@model OpenOrderFramework.Models.Customer
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Create</small></h2>
+</div>
+
+@if (TempData["save"] != null)
+{
+    <script type="text/javascript">
+    parent.$('.fancybox-close').click();
+    </script>
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CustomerID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerID)
+                @Html.ValidationMessageFor(model => model.CustomerID)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CustName, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustName)
+                @Html.ValidationMessageFor(model => model.CustName)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CustPassword, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustPassword)
+                @Html.ValidationMessageFor(model => model.CustPassword)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ShortName, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ShortName)
+                @Html.ValidationMessageFor(model => model.ShortName)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.SexType, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.SexType)*@
+                @Html.DropDownListFor(model => model.SexType, (IEnumerable<SelectListItem>)ViewBag.CodeSexs, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SexType)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CustLevel, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.CustLevel)*@
+                @Html.DropDownListFor(model => model.CustLevel, (IEnumerable<SelectListItem>)ViewBag.CodeCustLevels, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CustLevel)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CustType, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.CustType)*@
+                @Html.DropDownListFor(model => model.CustType, (IEnumerable<SelectListItem>)ViewBag.CodeCustTypes, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CustType)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ContactName, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ContactName)
+                @Html.ValidationMessageFor(model => model.ContactName)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.TelephoneNumber, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TelephoneNumber)
+                @Html.ValidationMessageFor(model => model.TelephoneNumber)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.MobileNumber, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MobileNumber)
+                @Html.ValidationMessageFor(model => model.MobileNumber)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.EmailValidated, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.EmailValidated)*@
+                @Html.DropDownListFor(model => model.EmailValidated, (IEnumerable<SelectListItem>)ViewBag.CodeYNs, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EmailValidated)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.TaxID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TaxID)
+                @Html.ValidationMessageFor(model => model.TaxID)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.PostalCode, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PostalCode)
+                @Html.ValidationMessageFor(model => model.PostalCode)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address)
+                @Html.ValidationMessageFor(model => model.Address)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.PostalCode2, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PostalCode2)
+                @Html.ValidationMessageFor(model => model.PostalCode2)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Address2, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address2)
+                @Html.ValidationMessageFor(model => model.Address2)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Memo, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Memo)
+                @Html.ValidationMessageFor(model => model.Memo)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ValidDate, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ValidDate)
+                @Html.ValidationMessageFor(model => model.ValidDate)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.InValidDate, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.InValidDate)
+                @Html.ValidationMessageFor(model => model.InValidDate)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.StoredPoint, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StoredPoint)
+                @Html.ValidationMessageFor(model => model.StoredPoint)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Birthday, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Birthday)
+                @Html.ValidationMessageFor(model => model.Birthday)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Job, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Job)*@
+                @Html.DropDownListFor(model => model.Job, (IEnumerable<SelectListItem>)ViewBag.CodeOccupations, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Job)
+            </div>
+        </div>
+
+        <div class="form-group noDisplay">
+            @Html.LabelFor(model => model.CreateUserID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreateUserID, new { htmlAttributes = new { @class = "form-control", @Value = "Enter" } })
+                @Html.ValidationMessageFor(model => model.CreateUserID)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.CreateDateTime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CreateDateTime)
+                    @Html.ValidationMessageFor(model => model.CreateDateTime)
+                </div>
+            </div>*@
+
+        <div class="form-group noDisplay">
+            @Html.LabelFor(model => model.ModifyUserID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifyUserID, new { htmlAttributes = new { @class = "form-control", @Value = "Enter" } })
+                @Html.ValidationMessageFor(model => model.ModifyUserID)
+            </div>
+        </div>
+
+        @* <div class="form-group">
+                @Html.LabelFor(model => model.ModifyDateTime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ModifyDateTime)
+                    @Html.ValidationMessageFor(model => model.ModifyDateTime)
+                </div>
+            </div>*@
+        <div class="form-group col-md-12">
+            <div class="control-label text-right">
+                <input type="submit" value=@Resources.Common.btnCreate class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

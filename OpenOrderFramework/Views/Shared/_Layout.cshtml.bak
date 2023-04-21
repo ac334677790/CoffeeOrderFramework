@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">權限管理<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("《S1010》使用者資料維護作業", "Index", "User")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S1020》使用者群組維護作業", "Index", "UserGroup_m")</li>
+                @*<li class="divider"></li>
+                <li>@Html.ActionLink("《S1025》使用者群組明細維護作業", "Index", "UserGroup_d")</li>*@
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S1030》作業權限維護作業", "Index", "Privilege")</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">系統管理<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("《S2010》代碼設定作業", "Index", "CodeKind")</li>
+                <li class="divider"></li>
+                @*<li>@Html.ActionLink("《S2015》代碼明細設定作業", "Index", "Code")</li>
+                <li class="divider"></li>*@
+                <li>@Html.ActionLink("《S2020》全域系統參數設定作業", "Index", "Param")</li>
+            </ul>
+        </li>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">人事管理<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("《S3010》公司別／店別基本資料維護", "Index", "Company")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S3020》部門基本維護", "Index", "Department")</li>
+                <li class="divider"></li>
+                <li>@*@Html.ActionLink("《D2030》職稱基本資料維護作業", "Index", "Home")*@</li>
+                @*<li class="divider"></li>*@
+                <li>@Html.ActionLink("《S3030》職位基本資料維護作業", "Index", "Position")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S3040》員工基本資料維護作業", "Index", "Employee")</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">產品管理<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("《S4010》庫別資料維護作業", "Index", "Warehouse")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S4020》廠商資料維護作業", "Index", "Factory")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S4030》產品類別維護作業", "Index", "ProductKind")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S4040》產品資料維護作業", "Index", "Product")</li>
+                @*<li class="divider"></li>
+                <li>@Html.ActionLink("《S4045》產品資料明細維護作業", "Index", "Product_d")</li>*@
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S4050》組合產品資料維護作業", "Index", "CombProduct_m")</li>
+                @*<li class="divider"></li>
+                <li>@Html.ActionLink("《S4055》組合產品明細維護作業", "Index", "CombProduct_d")</li>*@
+            </ul>
+        </li>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">訂單管理<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("《S5010》會員資料維護", "Index", "Customer")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S5020》訂單維護作業", "Index", "Order_m")</li>
+                @*<li class="divider"></li>
+                <li>@Html.ActionLink("《S5025》訂單明細維護作業", "Index", "Order_d")</li>*@
+                <li class="divider"></li>
+                <li>@Html.ActionLink("《S5030》長期訂單維護作業", "Index", "LongOrder_m")</li>
+            </ul>
+        </li>
+    </div>
+</body>
+</html>
+

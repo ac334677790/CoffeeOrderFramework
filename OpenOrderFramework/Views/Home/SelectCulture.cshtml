@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "SelectCulture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul data-role="listview">
+    <li>@Html.ActionLink("中文(繁體)", "SetCulture", "Home", new { culture = "zh-TW" }, null)</li>
+    <li>@Html.ActionLink("中文(简体)", "SetCulture", "Home", new { culture = "zh-CN" }, null)</li>
+    <li>@Html.ActionLink("日本語", "SetCulture", "Home", new { culture = "ja-JP" }, null)</li>
+    <li>@Html.ActionLink("Español", "SetCulture", "Home", new { culture = "es-ES" }, null)</li>
+</ul>

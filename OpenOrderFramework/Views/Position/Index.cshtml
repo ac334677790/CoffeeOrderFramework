@@ -1,0 +1,148 @@
+﻿@*@model IEnumerable<openorderframework.models.position>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.PositionListViewModel
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+<div class="well" id="Search">
+    @using (Html.BeginForm("Index", "Position",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Category:</label>*@
+                @Html.LabelFor(x => x.Positions.FirstOrDefault().PositionID, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.DropDownListFor(x => x.SearchParameter.PositionID, (SelectList)Model.PositionIDs, "-- select item --", new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Quantity Per Unit:</label>*@
+                @Html.LabelFor(x => x.Positions.FirstOrDefault().PositionName, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.PositionName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+                <span></span>
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+            </div>
+        </div>
+    }
+</div>
+
+    <table class="table">
+        <thead>
+            <tr id="sticker">
+                <th>
+
+                    <div class="btn-group" role="group" aria-label="...">
+
+                        @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                        <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.PagedListPager(Model.Positions,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().PositionID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().PositionName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().PositionLevel)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Positions.FirstOrDefault().ModifyDateTime)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+
+            @foreach (var item in Model.Positions)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PositionID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PositionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PositionLevel)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                    <td>
+                        @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.PositionID }) |
+                        @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.PositionID }) |
+                        @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.PositionID })
+                    </td>
+                </tr>
+            }
+
+</table>
+    @section scripts
+{
+        <script type="text/javascript">
+            $(function () {
+                $('.pagination>li>a[href]').each(function (i, item) {
+                    var page = $(item).attr('href').replace('/Position?page=', '');
+                    $(item).attr('href', '#').click(function () { postPage(page); });
+
+                });
+            });
+
+            function postPage(page) {
+                var targetFormId = '#PageList';
+                if ($(targetFormId).size() > 0) {
+                    $('<input>')
+                        .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                        .appendTo($(targetFormId));
+                    $(targetFormId).submit();
+                }
+            };
+        </script>
+    }

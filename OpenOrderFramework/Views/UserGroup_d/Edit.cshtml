@@ -1,0 +1,87 @@
+﻿@model OpenOrderFramework.ViewModels.UserGroup_dViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Edit</small></h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @*@Html.HiddenFor(model => model.CompanyID)*@
+        <select multiple="multiple" id="my-select" name="my-select[]">
+
+            @for (int i = 0; i < Model.UserGroup_dEdit.Count; i++)
+            {
+                if (@Model.UserGroup_dEdit[i].state.ToString() == "NOTHING")
+                {
+                    <option value=@i>@Model.UserGroup_dEdit[i].users.UserID</option>
+                }
+                else
+                {
+                    <option value=@i selected>@Model.UserGroup_dEdit[i].users.UserID</option>
+                }
+
+            }
+        </select>
+
+        <div id="state">
+            @for (int i = 0; i < Model.UserGroup_dEdit.Count; i++)
+            {
+                <div id="state-@Model.UserGroup_dEdit[i].users.UserID">
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.CompanyID)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.UserID)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.CreateUserID)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.CreateDateTime)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.CreateUserID)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].users.ModifyDateTime)
+                    @Html.HiddenFor(modelItem => Model.UserGroup_dEdit[i].state)
+                </div>
+            }
+        </div>
+
+
+
+
+        <div class="form-group col-md-12">
+            <div class="control-label text-right">
+                <input type="submit" value=@Resources.Common.btnSave class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#my-select').multiSelect({
+                afterSelect: function (values) {
+                    var o = $('#UserGroup_dEdit_' + values + '__state');
+                    if (o.val() == 'NOTHING') {
+                        o.val('INSERT');
+                    } else if (o.val() == 'DELETE') {
+                        o.val('MODIFY');
+                    }
+                },
+                afterDeselect: function (values) {
+                    var o = $('#UserGroup_dEdit_' + values + '__state');
+                    if (o.val() == 'INSERT') {
+                        o.val('NOTHING');
+                    } else if (o.val() == 'MODIFY') {
+                        o.val('DELETE');
+                    }
+                }
+            })
+        });
+
+    </script>
+}

@@ -1,0 +1,177 @@
+﻿@model OpenOrderFramework.Models.Order_d
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<h2>@Resources.Common.Delete</h2>
+
+<h3>@Resources.Common.DeleteMessege</h3>
+<div>
+    <h4>Order_d</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuoteNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteSeq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuoteSeq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdSpec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdSpec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCode_YN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndCode_YN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Common.btnDelete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Common.BacktoList, "Index")
+        </div>
+    }
+</div>

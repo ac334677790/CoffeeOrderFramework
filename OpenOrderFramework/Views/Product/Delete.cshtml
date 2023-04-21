@@ -1,0 +1,265 @@
+﻿@model OpenOrderFramework.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.Common.Delete</h2>
+
+<h3>@Resources.Common.DeleteMessege</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdKind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdKind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BarCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BarCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdSpec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdSpec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.New_YN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.New_YN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdOrigin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdSubject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdSubject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FactoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FactoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvegPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvegPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BarCode_YN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BarCode_YN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckStock_YN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckStock_YN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockIO_YN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockIO_YN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SafeQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SafeQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataStatus)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Common.btnDelete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Common.BacktoList, "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,113 @@
+﻿@model OpenOrderFramework.Models.Product_d
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div>
+    @Html.ActionLink(Resources.Common.BacktoList, "Index", new { id = @ViewBag.CompanyID + ',' + @ViewBag.ProductID })
+</div>
+<div style="text-align:center;display:inline">
+    <h2>產品編號：@ViewBag.OrderNo <small>@Resources.Common.Edit</small></h2>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CompanyID)
+
+
+        @*@Html.HiddenFor(model => model.Temperature)
+
+            @Html.HiddenFor(model => model.Size)*@
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ProductID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.ProductID } })
+                @Html.ValidationMessageFor(model => model.ProductID)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Temperature, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Temperature)*@
+                @Html.DropDownListFor(model => model.Temperature, (IEnumerable<SelectListItem>)ViewBag.CodeTemperatures, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Temperature)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Size, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Size)*@
+                @Html.DropDownListFor(model => model.Size, (IEnumerable<SelectListItem>)ViewBag.CodeSizes, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Size)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.SalePrice, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SalePrice)
+                @Html.ValidationMessageFor(model => model.SalePrice)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.Memo, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Memo)
+                @Html.ValidationMessageFor(model => model.Memo)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CreateUserID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreateUserID)
+                @Html.ValidationMessageFor(model => model.CreateUserID)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.CreateDateTime, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreateDateTime)
+                @Html.ValidationMessageFor(model => model.CreateDateTime)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ModifyUserID, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifyUserID)
+                @Html.ValidationMessageFor(model => model.ModifyUserID)
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            @Html.LabelFor(model => model.ModifyDateTime, new { @class = "control-label col-md-8" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifyDateTime)
+                @Html.ValidationMessageFor(model => model.ModifyDateTime)
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <div class="control-label text-right">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,281 @@
+﻿@model OpenOrderFramework.Models.Order_m
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Edit</small></h2>
+</div>
+
+@if (TempData["save"] != null)
+{
+    <script type="text/javascript">
+        parent.$('.fancybox-close').click();
+    </script>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#menu1">訂單資料</a></li>
+        <li><a data-toggle="tab" href="#menu2">連絡人資料</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="menu1" class="tab-pane fade in active">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6" id='datetimepicker1'>
+                    @Html.LabelFor(model => model.OrderDateTime, new { @class = "control-label col-md-8" })
+                    <div class="col-lg-8">
+                        @Html.TextBoxFor(model => model.OrderDateTime, new { @class = "datetimepicker" })
+                        @Html.ValidationMessageFor(model => model.OrderDateTime)
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.PayKind, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.PayKind, (IEnumerable<SelectListItem>)ViewBag.PayKinds, "", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PayKind)
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.CheckUserID, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.CheckUserID, new { @class = "field-EmpID" })
+                        <input id="CheckUserName" class="field-EmpName" />
+                        @Html.ValidationMessageFor(model => model.CheckUserID)
+                        @Html.ActionLink(" ", "SelectEmp", "Employee", new { id = "S1", EmpID = "CheckUserID", EmpName = "CheckUserName" }, new { @class = "fancybox fancybox.iframe glyphicon glyphicon-list-alt glyphicon-nonescaped", role = "group" })
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.PayAccount, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PayAccount)
+                        @Html.ValidationMessageFor(model => model.PayAccount)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.AppleyAccount, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AppleyAccount)
+                        @Html.ValidationMessageFor(model => model.AppleyAccount)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.AccountNAME, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AccountNAME)
+                        @Html.ValidationMessageFor(model => model.AccountNAME)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.Memo, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Memo)
+                        @Html.ValidationMessageFor(model => model.Memo)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.DataStatus, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.DataStatus, (IEnumerable<SelectListItem>)ViewBag.CodeOrderDataStatuses, "", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DataStatus)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.DeliveryDateTime, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DeliveryDateTime)
+                        @Html.ValidationMessageFor(model => model.DeliveryDateTime)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.DeliveryUserID, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.DeliveryUserID, new { @class = "field-EmpID" })
+                        <input id="DeliveryUserName" class="field-EmpName" />
+                        @Html.ValidationMessageFor(model => model.DeliveryUserID)
+                        @Html.ActionLink(" ", "SelectEmp", "Employee", new { id = "S1", EmpID = "DeliveryUserID", EmpName = "DeliveryUserName" }, new { @class = "fancybox fancybox.iframe glyphicon glyphicon-list-alt", role = "group" })
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.Promotional, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Promotional)
+                        @Html.ValidationMessageFor(model => model.Promotional)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.CustomerID, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CustomerID)
+                        @Html.ValidationMessageFor(model => model.CustomerID)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.CustName, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CustName)
+                        @Html.ValidationMessageFor(model => model.CustName)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.FaxNumber, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FaxNumber)
+                        @Html.ValidationMessageFor(model => model.FaxNumber)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.ContactName, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ContactName)
+                        @Html.ValidationMessageFor(model => model.ContactName)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.TelephoneNumber, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TelephoneNumber)
+                        @Html.ValidationMessageFor(model => model.TelephoneNumber)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.MobileNumber, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MobileNumber)
+                        @Html.ValidationMessageFor(model => model.MobileNumber)
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email)
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    @Html.LabelFor(model => model.DeliveryAddress, new { @class = "control-label col-md-8" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DeliveryAddress)
+                        @Html.ValidationMessageFor(model => model.DeliveryAddress)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CompanyID)
+
+        @Html.HiddenFor(model => model.OrderNo)
+        <div id="row">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                @Html.LabelFor(model => model.CreateUserID, new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CreateUserID)
+                    @Html.ValidationMessageFor(model => model.CreateUserID)
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                @Html.LabelFor(model => model.CreateDateTime, new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CreateDateTime)
+                    @Html.ValidationMessageFor(model => model.CreateDateTime)
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                @Html.LabelFor(model => model.ModifyUserID, new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ModifyUserID)
+                    @Html.ValidationMessageFor(model => model.ModifyUserID)
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                @Html.LabelFor(model => model.ModifyDateTime, new { @class = "control-label col-md-8" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ModifyDateTime)
+                    @Html.ValidationMessageFor(model => model.ModifyDateTime)
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                <div class="control-label text-right">
+                    <input type="submit" value=@Resources.Common.btnSave class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    $(function () {
+
+    });
+
+    ////預設日期
+    //$('#OrderDateTime').val(getToday());
+
+    //到貨付款，不用銀行填資料
+    $('#PayKind').change(function(){
+        if ($('#PayKind').val() == 'M03') {
+            $('#PayAccount').parent().parent().hide();
+            $('#AppleyAccount').parent().parent().hide();
+            $('#AccountNAME').parent().parent().hide();
+
+            if ($('#PayAccount').val() == '') { $('#PayAccount').val('#'); }
+            if ($('#AppleyAccount').val() == '') { $('#AppleyAccount').val('#'); }
+            if ($('#AccountNAME').val() == '') { $('#AccountNAME').val('#'); }
+        }
+        else {
+            $('#PayAccount').parent().parent().show();
+            $('#AppleyAccount').parent().parent().show();
+            $('#AccountNAME').parent().parent().show();
+
+            if ($('#PayAccount').val() == '#') { $('#PayAccount').val(''); }
+            if ($('#AppleyAccount').val() == '#') { $('#AppleyAccount').val(''); }
+            if ($('#AccountNAME').val() == '#') { $('#AccountNAME').val(''); }
+
+        }
+    })
+</script>
+}

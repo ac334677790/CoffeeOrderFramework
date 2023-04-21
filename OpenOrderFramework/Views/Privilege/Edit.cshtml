@@ -1,0 +1,175 @@
+﻿@model OpenOrderFramework.ViewModels.PrivilegeProgramViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .table th {
+        background-color: #fff;
+        border-bottom: 1px solid #DDD;
+    }
+
+
+</style>
+@*<h2>@Resources.Common.Edit</h2>*@
+
+@using (Html.BeginForm("Edit", "Privilege", FormMethod.Post, new { enctype = "multipart/form-data", name = "myForm" }))
+{
+    @Html.AntiForgeryToken()
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr id="sticker">
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Run)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().Program.ProgramID)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.program.ProgramID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Add)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Search)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Modify)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Delete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Print)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Help)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramEdit.FirstOrDefault().privilege.Transform)
+        </th>
+    </tr>
+        </thead>
+    @for (int i = 0; i < Model.ProgramEdit.Count; i++)
+    {
+        if (Model.ProgramEdit[i].ProgramOrder == 1)
+        { 
+            <tr>
+                <td colspan="9" style="text-align:center">
+                    @Model.ProgramEdit[i].ParentProgramID
+                </td>
+            </tr>
+        }
+        
+        <tr>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Run.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Run)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Program.ProgramID)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => Model.ProgramEdit[i].ProgDescription)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].ProgDescription)
+                @*<input type="checkbox" name="my-checkbox" checked>*@
+
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.CompanyID)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.GroupID)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.ProgramID)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.CreateUserID)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.ModifyUserID)
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].IsModify)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Add.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Add)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Search.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Search)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Modify.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Modify)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Delete.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Delete)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Print.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Print)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Help.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Help)
+            </td>
+            <td>
+                @if (Model.ProgramEdit[i].privilege.Transform.ToString() == "Y")
+                {<input type="checkbox" checked data-toggle="toggle" data-size="mini">}
+                else
+                {<input type="checkbox" data-toggle="toggle" data-size="mini"> }
+                @Html.HiddenFor(modelItem => Model.ProgramEdit[i].privilege.Transform)
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value=@Resources.Common.btnSave class="btn btn-default gotop" />
+    </div>
+</div>
+}
+<div>
+    @Html.ActionLink(Resources.Common.BacktoList, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(function () {
+            //開關
+            $('.toggle').click(function () {
+                //alert($(this).next().val());
+                if ($(this).next().val() == 'Y') {
+                    $(this).next().val('N');
+                }
+                else { $(this).next().val('Y'); }
+                $(this).parent().parent().find("[id$='IsModify']").val(1);
+            });
+                
+
+        });
+
+        //浮動th
+        var offset = $('.navbar-collapse').height();
+        $("table").stickyTableHeaders({ fixedOffset: offset });
+    </script>
+}

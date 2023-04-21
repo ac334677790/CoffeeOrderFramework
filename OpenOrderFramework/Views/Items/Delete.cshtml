@@ -1,0 +1,56 @@
+﻿@model OpenOrderFramework.Models.Item
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>@Resources.Common.Delete</h2>
+
+<h3>@Resources.Common.DeleteMessege</h3>
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Catagorie.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Catagorie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemPictureUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemPictureUrl)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Common.btnDelete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Common.BacktoList, "Index")
+        </div>
+    }
+</div>

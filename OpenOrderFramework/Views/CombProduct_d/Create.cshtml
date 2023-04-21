@@ -1,0 +1,114 @@
+﻿@model OpenOrderFramework.Models.CombProduct_d
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.Common.Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>CombProduct_d</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group noDisplay">
+            @Html.LabelFor(model => model.CompanyID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CompanyID, new { htmlAttributes = new { @class = "form-control", @Value = "Enter" } })
+                @Html.ValidationMessageFor(model => model.CompanyID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CombProductID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CombProductID, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.CombProductID } })
+                @Html.ValidationMessageFor(model => model.CombProductID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CombProdSeq, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CombProdSeq, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.CombProdSeq } })
+                @Html.ValidationMessageFor(model => model.CombProdSeq)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductID)
+                @Html.ValidationMessageFor(model => model.ProductID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OtherProductID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OtherProductID)
+                @Html.ValidationMessageFor(model => model.OtherProductID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Memo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Memo)
+                @Html.ValidationMessageFor(model => model.Memo)
+            </div>
+        </div>
+
+        <div class="form-group noDisplay">
+            @Html.LabelFor(model => model.CreateUserID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreateUserID, new { htmlAttributes = new { @class = "form-control", @Value = "Enter" } })
+                @Html.ValidationMessageFor(model => model.CreateUserID)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.CreateDateTime, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CreateDateTime)
+                @Html.ValidationMessageFor(model => model.CreateDateTime)
+            </div>
+        </div>*@
+
+        <div class="form-group noDisplay">
+            @Html.LabelFor(model => model.ModifyUserID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifyUserID, new { htmlAttributes = new { @class = "form-control", @Value = "Enter" } })
+                @Html.ValidationMessageFor(model => model.ModifyUserID)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.ModifyDateTime, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModifyDateTime)
+                @Html.ValidationMessageFor(model => model.ModifyDateTime)
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value=@Resources.Common.btnCreate class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(Resources.Common.BacktoList, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

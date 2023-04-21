@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace OpenOrderFramework.Models
+{
+    public class Product_d
+    {
+        [Key]
+        [Column(Order = 0)]
+        [Required(ErrorMessage = "請輸入公司別")]
+        [StringLength(6)]
+        [Display(Name = "公司別")]
+        public string CompanyID { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        [Required(ErrorMessage = "請輸入產品編號")]
+        [StringLength(30)]
+        [Display(Name = "產品編號")]
+        public string ProductID { get; set; }
+        
+        [Key]
+        [Column(Order = 2)]
+        [Required(ErrorMessage = "請輸入溫度")]
+        [StringLength(3)]
+        [Display(Name = "溫度")]
+        [DisplayFormat(ConvertEmptyStringToNull = false)]
+        public string Temperature { get; set; }
+        
+        [Key]
+        [Column(Order = 3)]
+        [Required(ErrorMessage = "請輸入大小")]
+        [StringLength(3)]
+        [Display(Name = "大小")]
+        [DisplayFormat(ConvertEmptyStringToNull = false)]
+        public string Size { get; set; }
+
+        [Required(ErrorMessage = "請輸入售價")]
+        //[StringLength(DECIMAL(10,3)]
+        [Display(Name = "售價")]
+        public decimal SalePrice { get; set; }
+
+        //[Required(ErrorMessage = "請輸入備註")]
+        [DisplayFormat(ConvertEmptyStringToNull = false)]
+        [StringLength(100)]
+        [Display(Name = "備註")]
+        public string Memo { get; set; }
+
+        [Required(ErrorMessage = "請輸入建立人員")]
+        [StringLength(14)]
+        [Display(Name = "建立人員")]
+        public string CreateUserID { get; set; }
+
+        [Required(ErrorMessage = "請輸入建立日期")]
+        //[StringLength(DATETIME)]
+        [Display(Name = "建立日期")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
+        public DateTime CreateDateTime { get; set; }
+
+        [Required(ErrorMessage = "請輸入維護人員")]
+        [StringLength(14)]
+        [Display(Name = "維護人員")]
+        public string ModifyUserID { get; set; }
+
+        [Required(ErrorMessage = "請輸入維護日期")]
+        //[StringLength(DATETIME)]
+        [Display(Name = "維護日期")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}", ApplyFormatInEditMode = true)]
+        public DateTime ModifyDateTime { get; set; }
+
+
+    }
+}

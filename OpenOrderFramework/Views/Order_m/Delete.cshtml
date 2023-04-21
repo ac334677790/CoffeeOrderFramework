@@ -1,0 +1,209 @@
+﻿@model OpenOrderFramework.Models.Order_m
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<h2>@Resources.Common.Delete</h2>
+
+<h3>@Resources.Common.DeleteMessege</h3>
+<div>
+    <h4>Order_m</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelephoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelephoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayKind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayKind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayAccount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppleyAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppleyAccount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Promotional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promotional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Common.btnDelete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Common.BacktoList, "Index")
+        </div>
+    }
+</div>

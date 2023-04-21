@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<title>@ViewBag.Title - Order Framework</title>*@
+    <title>@Resources.Common.SystemTitle</title>
+    @Styles.Render("~/Content/css2")
+        @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="/Content/card.css">
+    <link href="~/Content/Hodgepodge.css" rel="stylesheet" />
+</head>
+<body>    
+                <div class="container body-content">
+                    @RenderBody()
+                </div>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+</body>
+</html>

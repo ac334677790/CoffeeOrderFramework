@@ -1,0 +1,129 @@
+﻿@model OpenOrderFramework.Models.LongOrder_m
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.Common.Delete</h2>
+
+<h3>@Resources.Common.DeleteMessege</h3>
+<div>
+    <h4>LongOrder_m</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatetimeS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatetimeS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatetimeE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatetimeE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CycleDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CycleDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CycleWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CycleWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CycleMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CycleMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CycleHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CycleHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Common.btnDelete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Common.BacktoList, "Index")
+        </div>
+    }
+</div>

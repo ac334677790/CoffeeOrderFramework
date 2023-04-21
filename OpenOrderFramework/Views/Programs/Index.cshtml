@@ -1,0 +1,131 @@
+﻿@model IEnumerable<OpenOrderFramework.Models.Program>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+<p>
+    @Html.ActionLink(Resources.Common.Create, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentProgramID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Add)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Search)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modify)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Delete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Print)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Run)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Help)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transform)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkPage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramOrder)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentProgramID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProgDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Add)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Search)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modify)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Delete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Print)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Run)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Help)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transform)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkPage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProgramOrder)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreateUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifyDateTime)
+        </td>*@
+        <td>
+            @Html.ActionLink(Resources.Common.Edit, "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink(Resources.Common.Details, "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink(Resources.Common.Delete, "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

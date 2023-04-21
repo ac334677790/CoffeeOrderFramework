@@ -1,0 +1,1802 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Web.Helpers.3.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.SystemWebHelpersDelegates">
+            <summary>包含自訂委派，以用於 System.Web.Helpers 的 stub 和填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimChart">
+            <summary>System.Web.Helpers.Chart 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChart.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChart.#ctor(System.Web.Helpers.Chart)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChart.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChart.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChart.ConvertStringArgumentOf1StringString``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,System.String,``0})">
+            <summary>設定 Chart.ConvertStringArgument(String paramName, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AddLegendStringString">
+            <summary>設定 Chart.AddLegend(String title, String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AddSeriesStringStringStringStringStringInt32IEnumerableStringIEnumerableString">
+            <summary>設定 Chart.AddSeries(String name, String chartType, String chartArea, String axisLabel, String legend, Int32 markerStep, IEnumerable xValue, String xField, IEnumerable yValues, String yFields) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AddTitleStringString">
+            <summary>設定 Chart.AddTitle(String text, String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ApplyChartAreaChart">
+            <summary>設定 Chart.ApplyChartArea(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ApplyLegendsChart">
+            <summary>設定 Chart.ApplyLegends(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ApplySeriesChart">
+            <summary>設定 Chart.ApplySeries(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ApplyTitlesChart">
+            <summary>設定 Chart.ApplyTitles(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ConstructorHttpContextBaseFuncOfVirtualPathProviderInt32Int32StringString">
+            <summary>設定 Chart.Chart(HttpContextBase httpContext, Func`1&lt;VirtualPathProvider&gt; virtualPathProviderFunc, Int32 width, Int32 height, String theme, String themePath) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ConstructorHttpContextBaseVirtualPathProviderInt32Int32StringString">
+            <summary>設定 Chart.Chart(HttpContextBase httpContext, VirtualPathProvider virtualPathProvider, Int32 width, Int32 height, String theme, String themePath) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ConstructorInt32Int32StringString">
+            <summary>設定 Chart.Chart(Int32 width, Int32 height, String theme, String themePath) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ConvertStringToChartImageFormatString">
+            <summary>設定 Chart.ConvertStringToChartImageFormat(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.DataBindChartChart">
+            <summary>設定 Chart.DataBindChart(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.DataBindCrossTableIEnumerableStringStringStringStringString">
+            <summary>設定 Chart.DataBindCrossTable(IEnumerable dataSource, String groupByField, String xField, String yFields, String otherFields, String pointSortOrder) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.DataBindTableIEnumerableString">
+            <summary>設定 Chart.DataBindTable(IEnumerable dataSource, String xField) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ExecuteChartActionActionOfChart">
+            <summary>設定 Chart.ExecuteChartAction(Action`1&lt;Chart&gt; action) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.FileNameGet">
+            <summary>設定 Chart.get_FileName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.GetBytesString">
+            <summary>設定 Chart.GetBytes(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.GetDefaultContext">
+            <summary>設定 Chart.GetDefaultContext() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.GetFromCacheHttpContextBaseString">
+            <summary>設定 Chart.GetFromCache(HttpContextBase context, String key) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.GetFromCacheString">
+            <summary>設定 Chart.GetFromCache(String key) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.GetUniqueKey">
+            <summary>設定 Chart.GetUniqueKey() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.HeightGet">
+            <summary>設定 Chart.get_Height() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.LoadChartThemeFromFileChartStream">
+            <summary>設定 Chart.LoadChartThemeFromFile(Chart chart, Stream templateStream) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.LoadThemesChart">
+            <summary>設定 Chart.LoadThemes(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.NormalizeFormatString">
+            <summary>設定 Chart.NormalizeFormat(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SaveHttpContextBaseStringString">
+            <summary>設定 Chart.Save(HttpContextBase httpContext, String path, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SaveStringString">
+            <summary>設定 Chart.Save(String path, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SaveToCacheStringInt32Boolean">
+            <summary>設定 Chart.SaveToCache(String key, Int32 minutesToCache, Boolean slidingExpiration) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SaveXmlHttpContextBaseString">
+            <summary>設定 Chart.SaveXml(HttpContextBase httpContext, String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SaveXmlString">
+            <summary>設定 Chart.SaveXml(String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SetXAxisStringDoubleDouble">
+            <summary>設定 Chart.SetXAxis(String title, Double min, Double max) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.SetYAxisStringDoubleDouble">
+            <summary>設定 Chart.SetYAxis(String title, Double min, Double max) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.ToWebImageString">
+            <summary>設定 Chart.ToWebImage(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.WidthGet">
+            <summary>設定 Chart.get_Width() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.WriteFromCacheHttpContextBaseStringString">
+            <summary>設定 Chart.WriteFromCache(HttpContextBase context, String key, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.WriteFromCacheStringString">
+            <summary>設定 Chart.WriteFromCache(String key, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.WriteString">
+            <summary>設定 Chart.Write(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart._ctorb__0">
+            <summary>設定 Chart.&lt;.ctor&gt;b__0() 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimChart.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.AddLegendStringString">
+            <summary>設定 Chart.AddLegend(String title, String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.AddSeriesStringStringStringStringStringInt32IEnumerableStringIEnumerableString">
+            <summary>設定 Chart.AddSeries(String name, String chartType, String chartArea, String axisLabel, String legend, Int32 markerStep, IEnumerable xValue, String xField, IEnumerable yValues, String yFields) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.AddTitleStringString">
+            <summary>設定 Chart.AddTitle(String text, String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ApplyChartAreaChart">
+            <summary>設定 Chart.ApplyChartArea(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ApplyLegendsChart">
+            <summary>設定 Chart.ApplyLegends(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ApplySeriesChart">
+            <summary>設定 Chart.ApplySeries(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ApplyTitlesChart">
+            <summary>設定 Chart.ApplyTitles(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.DataBindChartChart">
+            <summary>設定 Chart.DataBindChart(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.DataBindCrossTableIEnumerableStringStringStringStringString">
+            <summary>設定 Chart.DataBindCrossTable(IEnumerable dataSource, String groupByField, String xField, String yFields, String otherFields, String pointSortOrder) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.DataBindTableIEnumerableString">
+            <summary>設定 Chart.DataBindTable(IEnumerable dataSource, String xField) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ExecuteChartActionActionOfChart">
+            <summary>設定 Chart.ExecuteChartAction(Action`1&lt;Chart&gt; action) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.FileNameGet">
+            <summary>設定 Chart.get_FileName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.GetBytesString">
+            <summary>設定 Chart.GetBytes(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.HeightGet">
+            <summary>設定 Chart.get_Height() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.LoadThemesChart">
+            <summary>設定 Chart.LoadThemes(Chart chart) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SaveHttpContextBaseStringString">
+            <summary>設定 Chart.Save(HttpContextBase httpContext, String path, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SaveStringString">
+            <summary>設定 Chart.Save(String path, String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SaveToCacheStringInt32Boolean">
+            <summary>設定 Chart.SaveToCache(String key, Int32 minutesToCache, Boolean slidingExpiration) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SaveXmlHttpContextBaseString">
+            <summary>設定 Chart.SaveXml(HttpContextBase httpContext, String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SaveXmlString">
+            <summary>設定 Chart.SaveXml(String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SetXAxisStringDoubleDouble">
+            <summary>設定 Chart.SetXAxis(String title, Double min, Double max) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.SetYAxisStringDoubleDouble">
+            <summary>設定 Chart.SetYAxis(String title, Double min, Double max) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.ToWebImageString">
+            <summary>設定 Chart.ToWebImage(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.WidthGet">
+            <summary>設定 Chart.get_Width() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChart.AllInstances.WriteString">
+            <summary>設定 Chart.Write(String format) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimChartTheme">
+            <summary>System.Web.Helpers.ChartTheme 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChartTheme.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChartTheme.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimChartTheme.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimChartTheme.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimCrypto">
+            <summary>System.Web.Helpers.Crypto 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimCrypto.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimCrypto.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimCrypto.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.BinaryToHexByteArray">
+            <summary>設定 Crypto.BinaryToHex(Byte[] data) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.ByteArraysEqualByteArrayByteArray">
+            <summary>設定 Crypto.ByteArraysEqual(Byte[] a, Byte[] b) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.GenerateSaltInt32">
+            <summary>設定 Crypto.GenerateSalt(Int32 byteLength) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.GenerateSaltInternalInt32">
+            <summary>設定 Crypto.GenerateSaltInternal(Int32 byteLength) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.HashByteArrayString">
+            <summary>設定 Crypto.Hash(Byte[] input, String algorithm) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.HashPasswordString">
+            <summary>設定 Crypto.HashPassword(String password) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.HashStringString">
+            <summary>設定 Crypto.Hash(String input, String algorithm) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.SHA1String">
+            <summary>設定 Crypto.SHA1(String input) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.SHA256String">
+            <summary>設定 Crypto.SHA256(String input) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimCrypto.VerifyHashedPasswordStringString">
+            <summary>設定 Crypto.VerifyHashedPassword(String hashedPassword, String password) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimDynamicJsonArray">
+            <summary>System.Web.Helpers.DynamicJsonArray 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.#ctor(System.Web.Helpers.DynamicJsonArray)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.Bind(System.Dynamic.IDynamicMetaObjectProvider)">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.Bind(System.Collections.IEnumerable)">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonArray.Bind(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.ConstructorObjectArray">
+            <summary>設定 DynamicJsonArray.DynamicJsonArray(Object[] arrayValues) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.GetEnumerable">
+            <summary>設定 DynamicJsonArray.GetEnumerable() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.GetEnumerator">
+            <summary>設定 DynamicJsonArray.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.ImplicitOpDynamicJsonArrayArray">
+            <summary>設定 DynamicJsonArray.op_Implicit(DynamicJsonArray obj) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.ImplicitOpDynamicJsonArrayObjectArray">
+            <summary>設定 DynamicJsonArray.op_Implicit(DynamicJsonArray obj) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.ItemGetInt32">
+            <summary>設定 DynamicJsonArray.get_Item(Int32 index) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.ItemSetInt32Object">
+            <summary>設定 DynamicJsonArray.set_Item(Int32 index, Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.LengthGet">
+            <summary>設定 DynamicJsonArray.get_Length() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.SystemCollectionsGenericIEnumerableSystemObjectGetEnumerator">
+            <summary>設定 DynamicJsonArray.System.Collections.Generic.IEnumerable&lt;System.Object&gt;.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryConvert(ConvertBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.GetEnumerable">
+            <summary>設定 DynamicJsonArray.GetEnumerable() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.GetEnumerator">
+            <summary>設定 DynamicJsonArray.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.ItemGetInt32">
+            <summary>設定 DynamicJsonArray.get_Item(Int32 index) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.ItemSetInt32Object">
+            <summary>設定 DynamicJsonArray.set_Item(Int32 index, Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.LengthGet">
+            <summary>設定 DynamicJsonArray.get_Length() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.SystemCollectionsGenericIEnumerableSystemObjectGetEnumerator">
+            <summary>設定 DynamicJsonArray.System.Collections.Generic.IEnumerable&lt;System.Object&gt;.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryConvert(ConvertBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonArray.AllInstances.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimDynamicJsonObject">
+            <summary>System.Web.Helpers.DynamicJsonObject 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonObject.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonObject.#ctor(System.Web.Helpers.DynamicJsonObject)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonObject.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonObject.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimDynamicJsonObject.Bind(System.Dynamic.IDynamicMetaObjectProvider)">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.ConstructorIDictionaryOfStringObject">
+            <summary>設定 DynamicJsonObject.DynamicJsonObject(IDictionary`2&lt;String,Object&gt; values) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.GetDynamicMemberNames">
+            <summary>設定 DynamicJsonObject.GetDynamicMemberNames() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.GetKeyObjectArray">
+            <summary>設定 DynamicJsonObject.GetKey(Object[] indexes) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.GetValueString">
+            <summary>設定 DynamicJsonObject.GetValue(String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.TryGetIndexGetIndexBinderObjectArrayObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.TrySetIndexSetIndexBinderObjectArrayObject">
+            <summary>設定 DynamicJsonObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.TrySetMemberSetMemberBinderObject">
+            <summary>設定 DynamicJsonObject.TrySetMember(SetMemberBinder binder, Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject._ctorb__0KeyValuePairOfStringObject">
+            <summary>設定 DynamicJsonObject.&lt;.ctor&gt;b__0(KeyValuePair`2&lt;String,Object&gt; p) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject._ctorb__1KeyValuePairOfStringObject">
+            <summary>設定 DynamicJsonObject.&lt;.ctor&gt;b__1(KeyValuePair`2&lt;String,Object&gt; p) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.GetDynamicMemberNames">
+            <summary>設定 DynamicJsonObject.GetDynamicMemberNames() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.GetValueString">
+            <summary>設定 DynamicJsonObject.GetValue(String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.TryGetIndexGetIndexBinderObjectArrayObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.TrySetIndexSetIndexBinderObjectArrayObject">
+            <summary>設定 DynamicJsonObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimDynamicJsonObject.AllInstances.TrySetMemberSetMemberBinderObject">
+            <summary>設定 DynamicJsonObject.TrySetMember(SetMemberBinder binder, Object value) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimJson">
+            <summary>System.Web.Helpers.Json 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimJson.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimJson.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimJson.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimJson.DecodeOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>設定 Json.Decode(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.CreateSerializer">
+            <summary>設定 Json.CreateSerializer() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.DecodeString">
+            <summary>設定 Json.Decode(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.DecodeStringType">
+            <summary>設定 Json.Decode(String value, Type targetType) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.EncodeObject">
+            <summary>設定 Json.Encode(Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.StaticConstructor">
+            <summary>設定 Json.Json() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.WrapObjectObject">
+            <summary>設定 Json.WrapObject(Object value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimJson.WriteObjectTextWriter">
+            <summary>設定 Json.Write(Object value, TextWriter writer) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimObjectInfo">
+            <summary>System.Web.Helpers.ObjectInfo 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimObjectInfo.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimObjectInfo.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimObjectInfo.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimObjectInfo.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimObjectInfo.PrintObjectInt32Int32">
+            <summary>設定 ObjectInfo.Print(Object value, Int32 depth, Int32 enumerationLength) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimServerInfo">
+            <summary>System.Web.Helpers.ServerInfo 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimServerInfo.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimServerInfo.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimServerInfo.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.Configuration">
+            <summary>設定 ServerInfo.Configuration() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.EnvironmentVariables">
+            <summary>設定 ServerInfo.EnvironmentVariables() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.GetHtml">
+            <summary>設定 ServerInfo.GetHtml() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.HttpRuntimeInfo">
+            <summary>設定 ServerInfo.HttpRuntimeInfo() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.InsertWhiteSpaceString">
+            <summary>設定 ServerInfo.InsertWhiteSpace(String s) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.LegacyCAS">
+            <summary>設定 ServerInfo.LegacyCAS() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.LegacyCASAppDomain">
+            <summary>設定 ServerInfo.LegacyCAS(AppDomain appDomain) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.PrintInfoSectionStringBuilderStringIDictionaryOfStringString">
+            <summary>設定 ServerInfo.PrintInfoSection(StringBuilder builder, String sectionTitle, IDictionary`2&lt;String,String&gt; entries) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.ServerVariables">
+            <summary>設定 ServerInfo.ServerVariables() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimServerInfo.ServerVariablesHttpContextBase">
+            <summary>設定 ServerInfo.ServerVariables(HttpContextBase context) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebCache">
+            <summary>System.Web.Helpers.WebCache 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebCache.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebCache.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebCache.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebCache.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebCache.GetString">
+            <summary>設定 WebCache.Get(String key) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebCache.RemoveString">
+            <summary>設定 WebCache.Remove(String key) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebCache.SetStringObjectInt32Boolean">
+            <summary>設定 WebCache.Set(String key, Object value, Int32 minutesToCache, Boolean slidingExpiration) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGrid">
+            <summary>System.Web.Helpers.WebGrid 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.#ctor(System.Web.Helpers.WebGrid)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.AddSorterOf2StringExpressionOfFuncOfM0M1``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.Helpers.WebGrid})">
+            <summary>設定 WebGrid.AddSorter(String columnName, Expression`1&lt;Func`2&lt;!!0,!!1&gt;&gt; keySelector) 的 填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AjaxUpdateCallbackGet">
+            <summary>設定 WebGrid.get_AjaxUpdateCallback() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AjaxUpdateContainerIdGet">
+            <summary>設定 WebGrid.get_AjaxUpdateContainerId() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.BindIEnumerableOfObjectIEnumerableOfStringBooleanInt32">
+            <summary>設定 WebGrid.Bind(IEnumerable`1&lt;Object&gt; source, IEnumerable`1&lt;String&gt; columnNames, Boolean autoSortAndPage, Int32 rowCount) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.CanSortGet">
+            <summary>設定 WebGrid.get_CanSort() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ColumnNamesGet">
+            <summary>設定 WebGrid.get_ColumnNames() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ColumnStringStringFuncOfObjectObjectStringBoolean">
+            <summary>設定 WebGrid.Column(String columnName, String header, Func`2&lt;Object,Object&gt; format, String style, Boolean canSort) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ColumnsWebGridColumnArray">
+            <summary>設定 WebGrid.Columns(WebGridColumn[] columnSet) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ConstructorHttpContextBaseStringInt32BooleanBooleanStringStringStringStringStringStringString">
+            <summary>設定 WebGrid.WebGrid(HttpContextBase context, String defaultSort, Int32 rowsPerPage, Boolean canPage, Boolean canSort, String ajaxUpdateContainerId, String ajaxUpdateCallback, String fieldNamePrefix, String pageFieldName, String selectionFieldName, String sortFieldName, String sortDirectionFieldName) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ConstructorIEnumerableOfObjectIEnumerableOfStringStringInt32BooleanBooleanStringStringStringStringStringStringString">
+            <summary>設定 WebGrid.WebGrid(IEnumerable`1&lt;Object&gt; source, IEnumerable`1&lt;String&gt; columnNames, String defaultSort, Int32 rowsPerPage, Boolean canPage, Boolean canSort, String ajaxUpdateContainerId, String ajaxUpdateCallback, String fieldNamePrefix, String pageFieldName, String selectionFieldName, String sortFieldName, String sortDirectionFieldName) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.CustomSortersGet">
+            <summary>設定 WebGrid.get_CustomSorters() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.CustomSortersSetIDictionaryOfStringExpression">
+            <summary>設定 WebGrid.set_CustomSorters(IDictionary`2&lt;String,Expression&gt; value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.EnsureColumnIsSortableIEnumerableOfWebGridColumn">
+            <summary>設定 WebGrid.EnsureColumnIsSortable(IEnumerable`1&lt;WebGridColumn&gt; columns) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.EnsureDataBound">
+            <summary>設定 WebGrid.EnsureDataBound() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.EnsureDataSourceNotMaterialized">
+            <summary>設定 WebGrid.EnsureDataSourceNotMaterialized() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.FieldNamePrefixGet">
+            <summary>設定 WebGrid.get_FieldNamePrefix() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetContainerUpdateScriptString">
+            <summary>設定 WebGrid.GetContainerUpdateScript(String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetDefaultColumnNamesIEnumerableOfObjectType">
+            <summary>設定 WebGrid.GetDefaultColumnNames(IEnumerable`1&lt;Object&gt; source, Type elementType) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetDefaultColumnsIEnumerableOfString">
+            <summary>設定 WebGrid.GetDefaultColumns(IEnumerable`1&lt;String&gt; exclusions) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetElementTypeIEnumerableOfObject">
+            <summary>設定 WebGrid.GetElementType(IEnumerable`1&lt;Object&gt; source) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetGenericEnumerableTypeType">
+            <summary>設定 WebGrid.GetGenericEnumerableType(Type type) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetMemberWebGridRowString">
+            <summary>設定 WebGrid.GetMember(WebGridRow row, String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetPageUrlInt32">
+            <summary>設定 WebGrid.GetPageUrl(Int32 pageIndex) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetPathNameValueCollectionStringArray">
+            <summary>設定 WebGrid.GetPath(NameValueCollection queryString, String[] exclusions) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetSortDirectionStringSortDirection">
+            <summary>設定 WebGrid.GetSortDirectionString(SortDirection sortDir) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.GetSortUrlString">
+            <summary>設定 WebGrid.GetSortUrl(String column) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.HasSelectionGet">
+            <summary>設定 WebGrid.get_HasSelection() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.HttpContextGet">
+            <summary>設定 WebGrid.get_HttpContext() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.IsAjaxEnabledGet">
+            <summary>設定 WebGrid.get_IsAjaxEnabled() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.IsBindableTypeType">
+            <summary>設定 WebGrid.IsBindableType(Type type) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ModeEnabledWebGridPagerModesWebGridPagerModes">
+            <summary>設定 WebGrid.ModeEnabled(WebGridPagerModes mode, WebGridPagerModes modeCheck) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PageCountGet">
+            <summary>設定 WebGrid.get_PageCount() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PageFieldNameGet">
+            <summary>設定 WebGrid.get_PageFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PageIndexGet">
+            <summary>設定 WebGrid.get_PageIndex() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PageIndexSetInt32">
+            <summary>設定 WebGrid.set_PageIndex(Int32 value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PagerWebGridPagerModesStringStringStringStringInt32">
+            <summary>設定 WebGrid.Pager(WebGridPagerModes mode, String firstText, String previousText, String nextText, String lastText, Int32 numericLinksCount) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.PagerWebGridPagerModesStringStringStringStringInt32Boolean">
+            <summary>設定 WebGrid.Pager(WebGridPagerModes mode, String firstText, String previousText, String nextText, String lastText, Int32 numericLinksCount, Boolean explicitlyCalled) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.QueryStringGet">
+            <summary>設定 WebGrid.get_QueryString() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.RowsGet">
+            <summary>設定 WebGrid.get_Rows() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.RowsPerPageGet">
+            <summary>設定 WebGrid.get_RowsPerPage() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SelectedIndexGet">
+            <summary>設定 WebGrid.get_SelectedIndex() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SelectedIndexSetInt32">
+            <summary>設定 WebGrid.set_SelectedIndex(Int32 value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SelectedRowGet">
+            <summary>設定 WebGrid.get_SelectedRow() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SelectionFieldNameGet">
+            <summary>設定 WebGrid.get_SelectionFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortColumnGet">
+            <summary>設定 WebGrid.get_SortColumn() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortColumnSetString">
+            <summary>設定 WebGrid.set_SortColumn(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortDirectionFieldNameGet">
+            <summary>設定 WebGrid.get_SortDirectionFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortDirectionGet">
+            <summary>設定 WebGrid.get_SortDirection() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortDirectionSetSortDirection">
+            <summary>設定 WebGrid.set_SortDirection(SortDirection value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.SortFieldNameGet">
+            <summary>設定 WebGrid.get_SortFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.TableStringStringStringStringStringStringStringBooleanBooleanStringIEnumerableOfWebGridColumnIEnumerableOfStringFuncOfObjectObjectObject">
+            <summary>設定 WebGrid.Table(String tableStyle, String headerStyle, String footerStyle, String rowStyle, String alternatingRowStyle, String selectedRowStyle, String caption, Boolean displayHeader, Boolean fillEmptyRows, String emptyRowCellValue, IEnumerable`1&lt;WebGridColumn&gt; columns, IEnumerable`1&lt;String&gt; exclusions, Func`2&lt;Object,Object&gt; footer, Object htmlAttributes) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.TotalRowCountGet">
+            <summary>設定 WebGrid.get_TotalRowCount() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ValidatePreDataBoundValues">
+            <summary>設定 WebGrid.ValidatePreDataBoundValues() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.ValidateSortColumnString">
+            <summary>設定 WebGrid.ValidateSortColumn(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._EnsureColumnIsSortableb__9WebGridColumn">
+            <summary>設定 WebGrid.&lt;EnsureColumnIsSortable&gt;b__9(WebGridColumn c) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._GetDefaultColumnNamesb__bPropertyInfo">
+            <summary>設定 WebGrid.&lt;GetDefaultColumnNames&gt;b__b(PropertyInfo p) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._GetDefaultColumnNamesb__cPropertyInfo">
+            <summary>設定 WebGrid.&lt;GetDefaultColumnNames&gt;b__c(PropertyInfo p) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._GetDefaultColumnNamesb__dString">
+            <summary>設定 WebGrid.&lt;GetDefaultColumnNames&gt;b__d(String n) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._GetDefaultColumnsb__12String">
+            <summary>設定 WebGrid.&lt;GetDefaultColumns&gt;b__12(String n) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid._GetElementTypeb__1Type">
+            <summary>設定 WebGrid.&lt;GetElementType&gt;b__1(Type t) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.AddSorterOf2StringExpressionOfFuncOfM0M1``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Web.Helpers.WebGrid,System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.Helpers.WebGrid})">
+            <summary>設定 WebGrid.AddSorter(String columnName, Expression`1&lt;Func`2&lt;!!0,!!1&gt;&gt; keySelector) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.AjaxUpdateCallbackGet">
+            <summary>設定 WebGrid.get_AjaxUpdateCallback() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.AjaxUpdateContainerIdGet">
+            <summary>設定 WebGrid.get_AjaxUpdateContainerId() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.BindIEnumerableOfObjectIEnumerableOfStringBooleanInt32">
+            <summary>設定 WebGrid.Bind(IEnumerable`1&lt;Object&gt; source, IEnumerable`1&lt;String&gt; columnNames, Boolean autoSortAndPage, Int32 rowCount) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.CanSortGet">
+            <summary>設定 WebGrid.get_CanSort() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.ColumnNamesGet">
+            <summary>設定 WebGrid.get_ColumnNames() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.ColumnStringStringFuncOfObjectObjectStringBoolean">
+            <summary>設定 WebGrid.Column(String columnName, String header, Func`2&lt;Object,Object&gt; format, String style, Boolean canSort) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.ColumnsWebGridColumnArray">
+            <summary>設定 WebGrid.Columns(WebGridColumn[] columnSet) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.CustomSortersGet">
+            <summary>設定 WebGrid.get_CustomSorters() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.CustomSortersSetIDictionaryOfStringExpression">
+            <summary>設定 WebGrid.set_CustomSorters(IDictionary`2&lt;String,Expression&gt; value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.EnsureColumnIsSortableIEnumerableOfWebGridColumn">
+            <summary>設定 WebGrid.EnsureColumnIsSortable(IEnumerable`1&lt;WebGridColumn&gt; columns) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.EnsureDataBound">
+            <summary>設定 WebGrid.EnsureDataBound() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.EnsureDataSourceNotMaterialized">
+            <summary>設定 WebGrid.EnsureDataSourceNotMaterialized() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.FieldNamePrefixGet">
+            <summary>設定 WebGrid.get_FieldNamePrefix() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetContainerUpdateScriptString">
+            <summary>設定 WebGrid.GetContainerUpdateScript(String path) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetDefaultColumnsIEnumerableOfString">
+            <summary>設定 WebGrid.GetDefaultColumns(IEnumerable`1&lt;String&gt; exclusions) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetHtmlStringStringStringStringStringStringStringBooleanBooleanStringIEnumerableOfWebGridColumnIEnumerableOfStringWebGridPagerModesStringStringStringStringInt32Object">
+            <summary>設定 WebGrid.GetHtml(String tableStyle, String headerStyle, String footerStyle, String rowStyle, String alternatingRowStyle, String selectedRowStyle, String caption, Boolean displayHeader, Boolean fillEmptyRows, String emptyRowCellValue, IEnumerable`1&lt;WebGridColumn&gt; columns, IEnumerable`1&lt;String&gt; exclusions, WebGridPagerModes mode, String firstText, String previousText, String nextText, String lastText, Int32 numericLinksCount, Object htmlAttributes) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetPageUrlInt32">
+            <summary>設定 WebGrid.GetPageUrl(Int32 pageIndex) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetPathNameValueCollectionStringArray">
+            <summary>設定 WebGrid.GetPath(NameValueCollection queryString, String[] exclusions) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.GetSortUrlString">
+            <summary>設定 WebGrid.GetSortUrl(String column) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.HasSelectionGet">
+            <summary>設定 WebGrid.get_HasSelection() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.HttpContextGet">
+            <summary>設定 WebGrid.get_HttpContext() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.IsAjaxEnabledGet">
+            <summary>設定 WebGrid.get_IsAjaxEnabled() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PageCountGet">
+            <summary>設定 WebGrid.get_PageCount() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PageFieldNameGet">
+            <summary>設定 WebGrid.get_PageFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PageIndexGet">
+            <summary>設定 WebGrid.get_PageIndex() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PageIndexSetInt32">
+            <summary>設定 WebGrid.set_PageIndex(Int32 value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PagerWebGridPagerModesStringStringStringStringInt32">
+            <summary>設定 WebGrid.Pager(WebGridPagerModes mode, String firstText, String previousText, String nextText, String lastText, Int32 numericLinksCount) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.PagerWebGridPagerModesStringStringStringStringInt32Boolean">
+            <summary>設定 WebGrid.Pager(WebGridPagerModes mode, String firstText, String previousText, String nextText, String lastText, Int32 numericLinksCount, Boolean explicitlyCalled) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.QueryStringGet">
+            <summary>設定 WebGrid.get_QueryString() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.RowsGet">
+            <summary>設定 WebGrid.get_Rows() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.RowsPerPageGet">
+            <summary>設定 WebGrid.get_RowsPerPage() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SelectedIndexGet">
+            <summary>設定 WebGrid.get_SelectedIndex() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SelectedIndexSetInt32">
+            <summary>設定 WebGrid.set_SelectedIndex(Int32 value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SelectedRowGet">
+            <summary>設定 WebGrid.get_SelectedRow() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SelectionFieldNameGet">
+            <summary>設定 WebGrid.get_SelectionFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortColumnGet">
+            <summary>設定 WebGrid.get_SortColumn() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortColumnSetString">
+            <summary>設定 WebGrid.set_SortColumn(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortDirectionFieldNameGet">
+            <summary>設定 WebGrid.get_SortDirectionFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortDirectionGet">
+            <summary>設定 WebGrid.get_SortDirection() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortDirectionSetSortDirection">
+            <summary>設定 WebGrid.set_SortDirection(SortDirection value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.SortFieldNameGet">
+            <summary>設定 WebGrid.get_SortFieldName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.TableStringStringStringStringStringStringStringBooleanBooleanStringIEnumerableOfWebGridColumnIEnumerableOfStringFuncOfObjectObjectObject">
+            <summary>設定 WebGrid.Table(String tableStyle, String headerStyle, String footerStyle, String rowStyle, String alternatingRowStyle, String selectedRowStyle, String caption, Boolean displayHeader, Boolean fillEmptyRows, String emptyRowCellValue, IEnumerable`1&lt;WebGridColumn&gt; columns, IEnumerable`1&lt;String&gt; exclusions, Func`2&lt;Object,Object&gt; footer, Object htmlAttributes) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.TotalRowCountGet">
+            <summary>設定 WebGrid.get_TotalRowCount() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.ValidatePreDataBoundValues">
+            <summary>設定 WebGrid.ValidatePreDataBoundValues() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGrid.AllInstances.ValidateSortColumnString">
+            <summary>設定 WebGrid.ValidateSortColumn(String value) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGridColumn">
+            <summary>System.Web.Helpers.WebGridColumn 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridColumn.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridColumn.#ctor(System.Web.Helpers.WebGridColumn)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridColumn.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridColumn.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.CanSortGet">
+            <summary>設定 WebGridColumn.get_CanSort() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.CanSortSetBoolean">
+            <summary>設定 WebGridColumn.set_CanSort(Boolean value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.ColumnNameGet">
+            <summary>設定 WebGridColumn.get_ColumnName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.ColumnNameSetString">
+            <summary>設定 WebGridColumn.set_ColumnName(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.Constructor">
+            <summary>設定 WebGridColumn.WebGridColumn() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.FormatGet">
+            <summary>設定 WebGridColumn.get_Format() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.FormatSetFuncOfObjectObject">
+            <summary>設定 WebGridColumn.set_Format(Func`2&lt;Object,Object&gt; value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.HeaderGet">
+            <summary>設定 WebGridColumn.get_Header() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.HeaderSetString">
+            <summary>設定 WebGridColumn.set_Header(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.StyleGet">
+            <summary>設定 WebGridColumn.get_Style() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.StyleSetString">
+            <summary>設定 WebGridColumn.set_Style(String value) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.CanSortGet">
+            <summary>設定 WebGridColumn.get_CanSort() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.CanSortSetBoolean">
+            <summary>設定 WebGridColumn.set_CanSort(Boolean value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.ColumnNameGet">
+            <summary>設定 WebGridColumn.get_ColumnName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.ColumnNameSetString">
+            <summary>設定 WebGridColumn.set_ColumnName(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.FormatGet">
+            <summary>設定 WebGridColumn.get_Format() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.FormatSetFuncOfObjectObject">
+            <summary>設定 WebGridColumn.set_Format(Func`2&lt;Object,Object&gt; value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.HeaderGet">
+            <summary>設定 WebGridColumn.get_Header() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.HeaderSetString">
+            <summary>設定 WebGridColumn.set_Header(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.StyleGet">
+            <summary>設定 WebGridColumn.get_Style() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridColumn.AllInstances.StyleSetString">
+            <summary>設定 WebGridColumn.set_Style(String value) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGridRow">
+            <summary>System.Web.Helpers.WebGridRow 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.#ctor(System.Web.Helpers.WebGridRow)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.Bind(System.Dynamic.IDynamicMetaObjectProvider)">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.Bind(System.Collections.IEnumerable)">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebGridRow.Bind(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>將介面的成員繫結至填充碼。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.ConstructorWebGridObjectInt32">
+            <summary>設定 WebGridRow.WebGridRow(WebGrid webGrid, Object value, Int32 rowIndex) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.GetEnumerator">
+            <summary>設定 WebGridRow.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.GetSelectLinkString">
+            <summary>設定 WebGridRow.GetSelectLink(String text) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.GetSelectUrl">
+            <summary>設定 WebGridRow.GetSelectUrl() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.ItemGetInt32">
+            <summary>設定 WebGridRow.get_Item(Int32 index) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.ItemGetString">
+            <summary>設定 WebGridRow.get_Item(String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>設定 WebGridRow.System.Collections.IEnumerable.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.ToString">
+            <summary>設定 WebGridRow.ToString() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.TryGetComplexMemberObjectStringObjectOut">
+            <summary>設定 WebGridRow.TryGetComplexMember(Object obj, String name, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 WebGridRow.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.TryGetMemberObjectStringObjectOut">
+            <summary>設定 WebGridRow.TryGetMember(Object obj, String name, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.TryGetMemberStringObjectOut">
+            <summary>設定 WebGridRow.TryGetMember(String memberName, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.TryGetRowIndexStringObjectOut">
+            <summary>設定 WebGridRow.TryGetRowIndex(String memberName, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.ValueGet">
+            <summary>設定 WebGridRow.get_Value() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.WebGridGet">
+            <summary>設定 WebGridRow.get_WebGrid() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow._GetEnumeratorb__0String">
+            <summary>設定 WebGridRow.&lt;GetEnumerator&gt;b__0(String c) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.GetEnumerator">
+            <summary>設定 WebGridRow.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.GetSelectLinkString">
+            <summary>設定 WebGridRow.GetSelectLink(String text) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.GetSelectUrl">
+            <summary>設定 WebGridRow.GetSelectUrl() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.ItemGetInt32">
+            <summary>設定 WebGridRow.get_Item(Int32 index) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.ItemGetString">
+            <summary>設定 WebGridRow.get_Item(String name) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>設定 WebGridRow.System.Collections.IEnumerable.GetEnumerator() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.ToString01">
+            <summary>設定 WebGridRow.ToString() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 WebGridRow.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.TryGetMemberStringObjectOut">
+            <summary>設定 WebGridRow.TryGetMember(String memberName, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.TryGetRowIndexStringObjectOut">
+            <summary>設定 WebGridRow.TryGetRowIndex(String memberName, Object&amp; result) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.ValueGet">
+            <summary>設定 WebGridRow.get_Value() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances.WebGridGet">
+            <summary>設定 WebGridRow.get_WebGrid() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebGridRow.AllInstances._GetEnumeratorb__0String">
+            <summary>設定 WebGridRow.&lt;GetEnumerator&gt;b__0(String c) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebImage">
+            <summary>System.Web.Helpers.WebImage 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebImage.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebImage.#ctor(System.Web.Helpers.WebImage)">
+            <summary>初始化指定執行個體的新填充碼</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebImage.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebImage.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AddImageWatermarkHttpContextBaseFuncOfStringByteArrayStringInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(HttpContextBase httpContext, Func`2&lt;String,Byte[]&gt; readAction, String watermarkImageFilePath, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AddImageWatermarkStringInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(String watermarkImageFilePath, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AddImageWatermarkWebImageInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(WebImage watermarkImage, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AddTextWatermarkStringStringInt32StringStringStringStringInt32Int32">
+            <summary>設定 WebImage.AddTextWatermark(String text, String fontColor, Int32 fontSize, String fontStyle, String fontFamily, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ApplyTransformationsAndSetProperties">
+            <summary>設定 WebImage.ApplyTransformationsAndSetProperties() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.Clone">
+            <summary>設定 WebImage.Clone() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ConstructorByteArray">
+            <summary>設定 WebImage.WebImage(Byte[] content) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ConstructorHttpContextBaseFuncOfStringByteArrayString">
+            <summary>設定 WebImage.WebImage(HttpContextBase httpContext, Func`2&lt;String,Byte[]&gt; readAction, String filePath) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ConstructorStream">
+            <summary>設定 WebImage.WebImage(Stream imageStream) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ConstructorString">
+            <summary>設定 WebImage.WebImage(String filePath) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ConstructorWebImage">
+            <summary>設定 WebImage.WebImage(WebImage other) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.CopyMetadataPropertyItemArrayImage">
+            <summary>設定 WebImage.CopyMetadata(PropertyItem[] properties, Image target) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.CropInt32Int32Int32Int32">
+            <summary>設定 WebImage.Crop(Int32 top, Int32 left, Int32 bottom, Int32 right) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.FileNameGet">
+            <summary>設定 WebImage.get_FileName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.FileNameSetString">
+            <summary>設定 WebImage.set_FileName(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.FlipHorizontal">
+            <summary>設定 WebImage.FlipHorizontal() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.FlipVertical">
+            <summary>設定 WebImage.FlipVertical() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetBitmapFromImageImageInt32Int32Boolean">
+            <summary>設定 WebImage.GetBitmapFromImage(Image image, Int32 width, Int32 height, Boolean preserveResolution) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetBytesString">
+            <summary>設定 WebImage.GetBytes(String requestedFormat) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetContentFromImageAndUpdateFormatImage">
+            <summary>設定 WebImage.GetContentFromImageAndUpdateFormat(Image image) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetImageFormatString">
+            <summary>設定 WebImage.GetImageFormat(String format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetImageFromRequestHttpRequestBaseString">
+            <summary>設定 WebImage.GetImageFromRequest(HttpRequestBase request, String postedFileName) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.GetImageFromRequestString">
+            <summary>設定 WebImage.GetImageFromRequest(String postedFileName) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.HeightGet">
+            <summary>設定 WebImage.get_Height() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ImageFormatGet">
+            <summary>設定 WebImage.get_ImageFormat() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ParseHorizontalAlignString">
+            <summary>設定 WebImage.ParseHorizontalAlign(String alignment) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ParseVerticalAlignString">
+            <summary>設定 WebImage.ParseVerticalAlign(String alignment) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ResizeInt32Int32BooleanBoolean">
+            <summary>設定 WebImage.Resize(Int32 width, Int32 height, Boolean preserveAspectRatio, Boolean preventEnlarge) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.RotateLeft">
+            <summary>設定 WebImage.RotateLeft() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.RotateRight">
+            <summary>設定 WebImage.RotateRight() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.SaveHttpContextBaseActionOfStringByteArrayStringStringBoolean">
+            <summary>設定 WebImage.Save(HttpContextBase context, Action`2&lt;String,Byte[]&gt; saveAction, String filePath, String imageFormat, Boolean forceWellKnownExtension) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.SaveStringStringBoolean">
+            <summary>設定 WebImage.Save(String filePath, String imageFormat, Boolean forceCorrectExtension) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.StaticConstructor">
+            <summary>設定 WebImage.WebImage() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.ValidateImageContentByteArrayString">
+            <summary>設定 WebImage.ValidateImageContent(Byte[] content, String paramName) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.WidthGet">
+            <summary>設定 WebImage.get_Width() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.WriteString">
+            <summary>設定 WebImage.Write(String requestedFormat) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage._cctorb__0ImageFormat">
+            <summary>設定 WebImage.&lt;.cctor&gt;b__0(ImageFormat format) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage._cctorb__1ImageFormat">
+            <summary>設定 WebImage.&lt;.cctor&gt;b__1(ImageFormat format) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebImage.AllInstances">
+            <summary>定義所有執行個體成員的填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.AddImageWatermarkHttpContextBaseFuncOfStringByteArrayStringInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(HttpContextBase httpContext, Func`2&lt;String,Byte[]&gt; readAction, String watermarkImageFilePath, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.AddImageWatermarkStringInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(String watermarkImageFilePath, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.AddImageWatermarkWebImageInt32Int32StringStringInt32Int32">
+            <summary>設定 WebImage.AddImageWatermark(WebImage watermarkImage, Int32 width, Int32 height, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.AddTextWatermarkStringStringInt32StringStringStringStringInt32Int32">
+            <summary>設定 WebImage.AddTextWatermark(String text, String fontColor, Int32 fontSize, String fontStyle, String fontFamily, String horizontalAlign, String verticalAlign, Int32 opacity, Int32 padding) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.ApplyTransformationsAndSetProperties">
+            <summary>設定 WebImage.ApplyTransformationsAndSetProperties() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.Clone">
+            <summary>設定 WebImage.Clone() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.CropInt32Int32Int32Int32">
+            <summary>設定 WebImage.Crop(Int32 top, Int32 left, Int32 bottom, Int32 right) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.FileNameGet">
+            <summary>設定 WebImage.get_FileName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.FileNameSetString">
+            <summary>設定 WebImage.set_FileName(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.FlipHorizontal">
+            <summary>設定 WebImage.FlipHorizontal() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.FlipVertical">
+            <summary>設定 WebImage.FlipVertical() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.GetBytesString">
+            <summary>設定 WebImage.GetBytes(String requestedFormat) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.GetContentFromImageAndUpdateFormatImage">
+            <summary>設定 WebImage.GetContentFromImageAndUpdateFormat(Image image) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.HeightGet">
+            <summary>設定 WebImage.get_Height() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.ImageFormatGet">
+            <summary>設定 WebImage.get_ImageFormat() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.ResizeInt32Int32BooleanBoolean">
+            <summary>設定 WebImage.Resize(Int32 width, Int32 height, Boolean preserveAspectRatio, Boolean preventEnlarge) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.RotateLeft">
+            <summary>設定 WebImage.RotateLeft() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.RotateRight">
+            <summary>設定 WebImage.RotateRight() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.SaveHttpContextBaseActionOfStringByteArrayStringStringBoolean">
+            <summary>設定 WebImage.Save(HttpContextBase context, Action`2&lt;String,Byte[]&gt; saveAction, String filePath, String imageFormat, Boolean forceWellKnownExtension) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.SaveStringStringBoolean">
+            <summary>設定 WebImage.Save(String filePath, String imageFormat, Boolean forceCorrectExtension) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.WidthGet">
+            <summary>設定 WebImage.get_Width() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebImage.AllInstances.WriteString">
+            <summary>設定 WebImage.Write(String requestedFormat) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.ShimWebMail">
+            <summary>System.Web.Helpers.WebMail 的填充碼類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebMail.#ctor">
+            <summary>初始化新填充碼執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebMail.BehaveAsCurrent">
+            <summary>指派填充類型之所有方法的 &apos;Current&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebMail.BehaveAsNotImplemented">
+            <summary>指派填充類型之所有方法的 &apos;NotImplemented&apos; 行為</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.ShimWebMail.ReadValueOf1Object``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Object,``0})">
+            <summary>設定 WebMail.ReadValue(Object key) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.AssignHeaderValuesMailMessageIEnumerableOfString">
+            <summary>設定 WebMail.AssignHeaderValues(MailMessage message, IEnumerable`1&lt;String&gt; headerValues) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.Behavior">
+            <summary>指派填充類型之所有方法的行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.EnableSslGet">
+            <summary>設定 WebMail.get_EnableSsl() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.EnableSslSetBoolean">
+            <summary>設定 WebMail.set_EnableSsl(Boolean value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.FromGet">
+            <summary>設定 WebMail.get_From() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.FromSetString">
+            <summary>設定 WebMail.set_From(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.PasswordGet">
+            <summary>設定 WebMail.get_Password() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.PasswordSetString">
+            <summary>設定 WebMail.set_Password(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.ReadSmtpDefaults">
+            <summary>設定 WebMail.ReadSmtpDefaults() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SendStringStringStringStringStringIEnumerableOfStringBooleanIEnumerableOfStringStringStringStringStringString">
+            <summary>設定 WebMail.Send(String to, String subject, String body, String from, String cc, IEnumerable`1&lt;String&gt; filesToAttach, Boolean isBodyHtml, IEnumerable`1&lt;String&gt; additionalHeaders, String bcc, String contentEncoding, String headerEncoding, String priority, String replyTo) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SetPriorityMailMessageString">
+            <summary>設定 WebMail.SetPriority(MailMessage message, String priority) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SetPropertiesOnClientSmtpClient">
+            <summary>設定 WebMail.SetPropertiesOnClient(SmtpClient client) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SetPropertiesOnMessageMailMessageStringStringStringStringStringStringStringStringStringMailPriorityIEnumerableOfStringBooleanIEnumerableOfString">
+            <summary>設定 WebMail.SetPropertiesOnMessage(MailMessage message, String to, String subject, String body, String from, String cc, String bcc, String replyTo, String contentEncoding, String headerEncoding, MailPriority priority, IEnumerable`1&lt;String&gt; filesToAttach, Boolean isBodyHtml, IEnumerable`1&lt;String&gt; additionalHeaders) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpPortGet">
+            <summary>設定 WebMail.get_SmtpPort() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpPortSetInt32">
+            <summary>設定 WebMail.set_SmtpPort(Int32 value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpServerGet">
+            <summary>設定 WebMail.get_SmtpServer() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpServerSetString">
+            <summary>設定 WebMail.set_SmtpServer(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpUseDefaultCredentialsGet">
+            <summary>設定 WebMail.get_SmtpUseDefaultCredentials() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.SmtpUseDefaultCredentialsSetBoolean">
+            <summary>設定 WebMail.set_SmtpUseDefaultCredentials(Boolean value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.StaticConstructor">
+            <summary>設定 WebMail.WebMail() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.TryParseHeaderStringStringOutStringOut">
+            <summary>設定 WebMail.TryParseHeader(String header, String&amp; key, String&amp; value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.UserNameGet">
+            <summary>設定 WebMail.get_UserName() 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail.UserNameSetString">
+            <summary>設定 WebMail.set_UserName(String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__1MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__1(MailMessage message, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__2MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__2(MailMessage message, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__3MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__3(MailMessage mailMessage, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__4MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__4(MailMessage mailMessage, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__5MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__5(MailMessage mailMessage, String value) 的 填充碼</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.ShimWebMail._cctorb__6MailMessageString">
+            <summary>設定 WebMail.&lt;.cctor&gt;b__6(MailMessage mailMessage, String value) 的 填充碼</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubChart">
+            <summary>System.Web.Helpers.Chart 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubChart.#ctor(System.Int32,System.Int32,System.String,System.String)">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubChart.InitializeStub">
+            <summary>初始化 type StubChart 的新執行個體</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubChart.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubChart.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubChart.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubDynamicJsonArray">
+            <summary>System.Web.Helpers.DynamicJsonArray 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.#ctor(System.Object[])">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.GetDynamicMemberNames">
+            <summary>設定 DynamicObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.GetDynamicMemberNames01">
+            <summary>設定 DynamicObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.GetMetaObject(System.Linq.Expressions.Expression)">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.GetMetaObjectExpression">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.InitializeStub">
+            <summary>初始化 type StubDynamicJsonArray 的新執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryBinaryOperationBinaryOperationBinderObjectObjectOut">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryConvert(System.Dynamic.ConvertBinder,System.Object@)">
+            <summary>設定 DynamicJsonArray.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryCreateInstanceCreateInstanceBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryDeleteIndexDeleteIndexBinderObjectArray">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryDeleteMember(System.Dynamic.DeleteMemberBinder)">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryDeleteMemberDeleteMemberBinder">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryGetIndexGetIndexBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+            <summary>設定 DynamicJsonArray.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonArray.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryInvokeInvokeBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryInvokeMemberInvokeMemberBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)">
+            <summary>設定 DynamicObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TrySetIndexSetIndexBinderObjectArrayObject">
+            <summary>設定 DynamicObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+            <summary>設定 DynamicObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TrySetMemberSetMemberBinderObject">
+            <summary>設定 DynamicObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonArray.TryUnaryOperationUnaryOperationBinderObjectOut">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonArray.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonArray.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonArray.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubDynamicJsonObject">
+            <summary>System.Web.Helpers.DynamicJsonObject 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.GetDynamicMemberNames">
+            <summary>設定 DynamicJsonObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.GetDynamicMemberNames01">
+            <summary>設定 DynamicJsonObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.GetMetaObject(System.Linq.Expressions.Expression)">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.GetMetaObjectExpression">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.InitializeStub">
+            <summary>初始化 type StubDynamicJsonObject 的新執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryBinaryOperationBinaryOperationBinderObjectObjectOut">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryConvert(System.Dynamic.ConvertBinder,System.Object@)">
+            <summary>設定 DynamicJsonObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryCreateInstanceCreateInstanceBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryDeleteIndexDeleteIndexBinderObjectArray">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryDeleteMember(System.Dynamic.DeleteMemberBinder)">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryDeleteMemberDeleteMemberBinder">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicJsonObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryGetIndexGetIndexBinderObjectArrayObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+            <summary>設定 DynamicJsonObject.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryGetMemberGetMemberBinderObjectOut">
+            <summary>設定 DynamicJsonObject.TryGetMember(GetMemberBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryInvokeInvokeBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryInvokeMemberInvokeMemberBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)">
+            <summary>設定 DynamicJsonObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TrySetIndexSetIndexBinderObjectArrayObject">
+            <summary>設定 DynamicJsonObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+            <summary>設定 DynamicJsonObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TrySetMemberSetMemberBinderObject">
+            <summary>設定 DynamicJsonObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubDynamicJsonObject.TryUnaryOperationUnaryOperationBinderObjectOut">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonObject.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonObject.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubDynamicJsonObject.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubWebGrid">
+            <summary>System.Web.Helpers.WebGrid 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGrid.#ctor(System.Collections.Generic.IEnumerable{System.Object},System.Collections.Generic.IEnumerable{System.String},System.String,System.Int32,System.Boolean,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGrid.InitializeStub">
+            <summary>初始化 type StubWebGrid 的新執行個體</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGrid.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGrid.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGrid.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubWebGridColumn">
+            <summary>System.Web.Helpers.WebGridColumn 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridColumn.#ctor">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridColumn.InitializeStub">
+            <summary>初始化 type StubWebGridColumn 的新執行個體</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridColumn.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridColumn.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridColumn.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubWebGridRow">
+            <summary>System.Web.Helpers.WebGridRow 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.#ctor(System.Web.Helpers.WebGrid,System.Object,System.Int32)">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.GetDynamicMemberNames">
+            <summary>設定 DynamicObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.GetDynamicMemberNames01">
+            <summary>設定 DynamicObject.GetDynamicMemberNames() 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.GetMetaObject(System.Linq.Expressions.Expression)">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.GetMetaObjectExpression">
+            <summary>設定 DynamicObject.GetMetaObject(Expression parameter) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.InitializeStub">
+            <summary>初始化 type StubWebGridRow 的新執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.ToString">
+            <summary>設定 WebGridRow.ToString() 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.ToString01">
+            <summary>設定 WebGridRow.ToString() 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryBinaryOperationBinaryOperationBinderObjectObjectOut">
+            <summary>設定 DynamicObject.TryBinaryOperation(BinaryOperationBinder binder, Object arg, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryConvert(System.Dynamic.ConvertBinder,System.Object@)">
+            <summary>設定 DynamicObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryConvertConvertBinderObjectOut">
+            <summary>設定 DynamicObject.TryConvert(ConvertBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryCreateInstanceCreateInstanceBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryCreateInstance(CreateInstanceBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryDeleteIndexDeleteIndexBinderObjectArray">
+            <summary>設定 DynamicObject.TryDeleteIndex(DeleteIndexBinder binder, Object[] indexes) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryDeleteMember(System.Dynamic.DeleteMemberBinder)">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryDeleteMemberDeleteMemberBinder">
+            <summary>設定 DynamicObject.TryDeleteMember(DeleteMemberBinder binder) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryGetIndexGetIndexBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryGetIndex(GetIndexBinder binder, Object[] indexes, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryInvokeInvokeBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvoke(InvokeBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryInvokeMemberInvokeMemberBinderObjectArrayObjectOut">
+            <summary>設定 DynamicObject.TryInvokeMember(InvokeMemberBinder binder, Object[] args, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)">
+            <summary>設定 DynamicObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TrySetIndexSetIndexBinderObjectArrayObject">
+            <summary>設定 DynamicObject.TrySetIndex(SetIndexBinder binder, Object[] indexes, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+            <summary>設定 DynamicObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TrySetMemberSetMemberBinderObject">
+            <summary>設定 DynamicObject.TrySetMember(SetMemberBinder binder, Object value) 的 stub</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebGridRow.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="F:System.Web.Helpers.Fakes.StubWebGridRow.TryUnaryOperationUnaryOperationBinderObjectOut">
+            <summary>設定 DynamicObject.TryUnaryOperation(UnaryOperationBinder binder, Object&amp; result) 的 stub</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridRow.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridRow.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebGridRow.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+        <member name="T:System.Web.Helpers.Fakes.StubWebImage">
+            <summary>System.Web.Helpers.WebImage 的 stub 類型</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebImage.#ctor(System.IO.Stream)">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebImage.#ctor(System.Byte[])">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebImage.#ctor(System.String)">
+            <summary>初始化新的執行個體</summary>
+        </member>
+        <member name="M:System.Web.Helpers.Fakes.StubWebImage.InitializeStub">
+            <summary>初始化 type StubWebImage 的新執行個體</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebImage.CallBase">
+            <summary>取得或設定值，此值表示是否應呼叫基底方法，而不採取後援行為</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebImage.InstanceBehavior">
+            <summary>取得或設定執行個體行為。</summary>
+        </member>
+        <member name="P:System.Web.Helpers.Fakes.StubWebImage.InstanceObserver">
+            <summary>取得或設定執行個體觀察者。</summary>
+        </member>
+    </members>
+</doc>

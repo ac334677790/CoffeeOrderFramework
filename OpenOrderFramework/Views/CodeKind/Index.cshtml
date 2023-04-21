@@ -1,0 +1,230 @@
+﻿@*@model IEnumerable<openorderframework.models.codekind>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.CodeKindListViewModel
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+                      <div class="well" id="Search">
+                          @using (Html.BeginForm("Index", "CodeKind",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+                          {
+                              <div class="row">
+                                  <div class="col-md-6 form-group">
+                                      @*<label class="col-lg-3 control-label">代碼類別:</label>*@
+                                      @Html.LabelFor(x => x.CodeKinds.FirstOrDefault().Code_Kind, new { @class="col-lg-3 control-label" })                                 
+                                      <div class="col-lg-8">
+                                          @Html.DropDownListFor(x => x.SearchParameter.Code_Kind, (SelectList)Model.Code_Kinds, "-- select item --", new { @class = "form-control" })
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-6 form-group">
+                                      @*<label class="col-lg-3 control-label">代碼類別名稱</label>*@
+                                      @Html.LabelFor(x => x.CodeKinds.FirstOrDefault().Code_KindName, new { @class = "col-lg-3 control-label" })
+                                      <div class="col-lg-8">
+                                          @Html.EditorFor(x => x.SearchParameter.Code_KindName, new { htmlAttributes = new { @class = "form-control" } })
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <span class="clearfix"></span>
+                              <div class="row">
+                                  <div class="col-md-offset-5">
+                                      <input type="submit" class="btn btn-primary" value= @Resources.Common.Search>
+                                      <span></span>
+                                      <input type="reset" class="btn btn-default" value= @Resources.Common.Cancel>
+                                  </div>
+                              </div>
+                          }
+                      </div>
+
+    <table class="table">
+        <thead>
+            <tr id="sticker">
+                <th>
+
+                    <div class="btn-group" role="group" aria-label="...">
+
+                        @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                        <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.PagedListPager(Model.CodeKinds,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().Code_Kind)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().Code_KindName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().Memo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().Modify_YN)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().ModifyDateTime)
+                </th>*@
+                <th></th>
+                <th></th>
+            </tr>
+            @*<tr>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().CodeID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().CodeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Code1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codes.FirstOrDefault().Code2)
+                </th>
+                @^*<th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodeKinds.FirstOrDefault().ModifyDateTime)
+                </th>*^@
+                <th></th>
+            </tr>*@
+        </thead>
+            @foreach (var item in Model.CodeKinds)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Code_Kind)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Code_KindName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Memo)
+                    </td>
+                    <td>
+                        @if (@Model.CodeYN.ContainsKey(item.Modify_YN))
+                        {@Model.CodeYN[item.Modify_YN] }
+                        else
+                        {@Html.DisplayFor(modelItem => item.Modify_YN)}
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                    <td></td>
+                    <td>
+                        @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.Code_Kind }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                        @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.Code_Kind }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                        @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.Code_Kind }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                        @Html.ActionLink(Resources.Common.DetailList, "../Code/Index", new { id = item.CompanyID + ',' + @item.Code_Kind }, new { @class = "fancybox fancybox.iframe", role = "group" })
+                    </td>
+                </tr>
+
+
+
+
+                @*foreach (var item_d in Model.Codes)
+                {
+
+                    if (item.Code_Kind == item_d.Code_Kind)
+                    {
+                        <tr>
+                            <td></td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item_d.CodeID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item_d.CodeName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item_d.Code1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item_d.Code2)
+                            </td>
+                            @^*<td>
+                                    @Html.DisplayFor(modelItem => item.CreateUserID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CreateDateTime)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ModifyUserID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                                </td>*^@
+                                <td>
+                                    @Html.ActionLink(Resources.Common.Edit, "../Code/Edit", new { id = item_d.CompanyID + ',' + @item_d.Code_Kind + ',' + @item_d.CodeID }) |
+                                    @Html.ActionLink(Resources.Common.Details, "../Code/Details", new { id = item.CompanyID + ',' + @item.Code_Kind + ',' + @item_d.CodeID }) |
+                                    @Html.ActionLink(Resources.Common.Delete, "../Code/Delete", new { id = item.CompanyID + ',' + @item.Code_Kind + ',' + @item_d.CodeID })
+                                </td>
+                            </tr>
+                        }
+                    }*@
+                }
+
+    </table>
+        @section scripts
+    {
+            <script type="text/javascript">
+                $(function () {
+                    $('.pagination>li>a[href]').each(function (i, item) {
+                        var page = $(item).attr('href').replace('/CodeKind?page=', '');
+                        $(item).attr('href', '#').click(function () { postPage(page); });
+
+                    });
+                });
+
+                function postPage(page) {
+                    var targetFormId = '#PageList';
+                    if ($(targetFormId).size() > 0) {
+                        $('<input>')
+                            .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                            .appendTo($(targetFormId));
+                        $(targetFormId).submit();
+                    }
+                };
+            </script>
+        }

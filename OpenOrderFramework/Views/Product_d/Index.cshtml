@@ -1,0 +1,58 @@
+﻿@*@model IEnumerable<OpenOrderFramework.Models.Product_d>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.Product_dListViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>產品編號：@ViewBag.ProductID <small>@Resources.Common.Index</small></h2>
+</div>
+
+
+<p>
+    @Html.ActionLink(Resources.Common.Create, "Create", new { id = @ViewBag.CompanyID + ',' + @ViewBag.ProductID })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_ds.FirstOrDefault().Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_ds.FirstOrDefault().Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_ds.FirstOrDefault().SalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_ds.FirstOrDefault().Memo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Product_ds)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo)
+        </td>
+        <td>
+            @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.ProductID + ',' + @item.Temperature + ',' + @item.Size }) |
+            @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.ProductID + ',' + @item.Temperature + ',' + @item.Size }) |
+            @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.ProductID + ',' + @item.Temperature + ',' + @item.Size })
+        </td>
+    </tr>
+}
+
+</table>

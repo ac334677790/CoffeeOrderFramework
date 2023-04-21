@@ -1,0 +1,147 @@
+﻿@model OpenOrderFramework.Models.Company
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.Common.Details</h2>
+
+<div>
+    <h4>Company</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneCountryCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneCountryCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneAreaCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneAreaCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessHourS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessHourS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessHourE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessHourE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifyDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = Model.CompanyID }) |
+    @Html.ActionLink(Resources.Common.BacktoList, "Index")
+</p>

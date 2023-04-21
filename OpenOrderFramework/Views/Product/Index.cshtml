@@ -1,0 +1,312 @@
+﻿@*@model IEnumerable<openorderframework.models.product>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.ProductListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+<div class="well" id="Search">
+    @using (Html.BeginForm("Index", "Product",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Product Name:</label>*@
+                @Html.LabelFor(x => x.Products.FirstOrDefault().ProdName, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.ProdName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Quantity Per Unit:</label>*@
+                @Html.LabelFor(x => x.Products.FirstOrDefault().ProdSpec, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.ProdSpec, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @*<div class="col-md-6 form-group">
+                    <label class="col-lg-3 control-label">Supplier:</label>
+                    <div class="col-lg-8">
+                        @Html.DropDownListFor(x => x.SearchParameter.Supplier, (SelectList)Model.Suppliers, "-- select item --", new { @class = "form-control" })
+                    </div>
+                </div>*@
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Category:</label>*@
+                @Html.LabelFor(x => x.Products.FirstOrDefault().ProductID, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.DropDownListFor(x => x.SearchParameter.ProductID, (SelectList)Model.ProductIDs, "-- select item --", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+                <span></span>
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+<table class="table">
+    <thead>
+        <tr id="sticker">
+            <th>
+
+                <div class="btn-group" role="group" aria-label="...">
+
+                    @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                    <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+@Html.PagedListPager(Model.Products,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdKind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().BarCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdName)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdSpec)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdColor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdUnit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().UnitWeight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdPhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().New_YN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdOrigin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProdSubject)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().FactoryID)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().FinalPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().AvegPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().CostPrice)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().SalePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().WarehouseID)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().BarCode_YN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().CheckStock_YN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().StockIO_YN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().SafeQty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().DataStatus)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().Temperature)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().Sugar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().Size)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Products.FirstOrDefault().Memo)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifyDateTime)
+                </th>*@
+            <th></th>
+        </tr>
+
+    </thead>
+
+
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @if (@Model.ProductKind.ContainsKey(item.ProdKind))
+                    {@Model.ProductKind[item.ProdKind] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.ProdKind)}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BarCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProdName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.ProdSpec)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdColor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdUnit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitWeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdPhoto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.New_YN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdOrigin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdSubject)
+                    </td>*@
+                <td>
+                    @if (@Model.Factory.ContainsKey(item.FactoryID))
+                    {@Model.Factory[item.FactoryID] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.FactoryID)}
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.FinalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AvegPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostPrice)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalePrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WarehouseID)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.BarCode_YN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CheckStock_YN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StockIO_YN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SafeQty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataStatus)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Temperature)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sugar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Size)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Memo)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                <td>
+                    @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.ProductID }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                    @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.ProductID }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                    @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.ProductID }, new { @class = "fancybox fancybox.iframe", role = "group" }) |
+                    @Html.ActionLink(Resources.Common.DetailList, "../Product_d/Index", new { id = item.CompanyID + ',' + @item.ProductID }, new { @class = "fancybox fancybox.iframe", role = "group" })
+                </td>
+            </tr>
+
+        }
+
+</table>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('.pagination>li>a[href]').each(function (i, item) {
+                var page = $(item).attr('href').replace('/Product?page=', '');
+                $(item).attr('href', '#').click(function () { postPage(page); });
+
+            });
+        });
+
+        function postPage(page) {
+            var targetFormId = '#PageList';
+            if ($(targetFormId).size() > 0) {
+                $('<input>')
+                    .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                    .appendTo($(targetFormId));
+                $(targetFormId).submit();
+            }
+        };
+    </script>
+}

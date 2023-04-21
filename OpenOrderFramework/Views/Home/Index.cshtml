@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>咖啡管理系統</h1>
+    <p class="lead">進化了</p>
+    <p>@*<button type="button" class="btn btn-primary btn-large" onclick="location.href='@Url.Action("Index", "Order_m")'">@Resources.Menu.GoOrder &raquo;</button>*@</p>
+
+    @Html.ActionLink(Resources.Menu.CultureName,
+                 "SelectCulture", "Home", null,
+                 new { data_role = "button", data_icon = "info", data_rel = "dialog" })
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+       
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+       
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+
+
+
+</div>

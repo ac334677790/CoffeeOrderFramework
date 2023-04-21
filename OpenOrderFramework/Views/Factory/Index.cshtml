@@ -1,0 +1,358 @@
+﻿@*@model IEnumerable<openorderframework.models.factory>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.FactoryListViewModel
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+<div class="well" id="Search">
+    @using (Html.BeginForm("Index", "Factory",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Category:</label>*@
+                @Html.LabelFor(x => x.Factorys.FirstOrDefault().FactoryID, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.DropDownListFor(x => x.SearchParameter.FactoryID, (SelectList)Model.FactoryIDs, "-- select item --", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Product Name:</label>*@
+                @Html.LabelFor(x => x.Factorys.FirstOrDefault().FactoryName, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.FactoryName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+                <span></span>
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+            </div>
+        </div>
+    }
+</div>
+
+
+    <table class="table">
+        <thead>
+            <tr id="sticker">
+                <th>
+
+                    <div class="btn-group" role="group" aria-label="...">
+
+                        @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                        <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.PagedListPager(Model.Factorys,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FactoryID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ShortName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FactoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PostalCode)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().c_PostalCode)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FactoryAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ChargeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PhoneCountryCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PhoneAreaCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FaxNumber)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ContactName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ContactTiitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().TelephoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().MobileNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().CloseDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PayDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PayDays)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().TaxID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Site)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FactoryLevel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().FactoryType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Bank1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Account1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Bank2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Account2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PayTerms)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().PayCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Memo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar5)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().Acct_no_ar6)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().InValidDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Factorys.FirstOrDefault().ModifyDateTime)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+
+            @foreach (var item in Model.Factorys)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FactoryID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FactoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostalCode)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.c_PostalCode)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FactoryAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChargeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneCountryCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneAreaCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FaxNumber)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactTiitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TelephoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MobileNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CloseDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PayDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PayDays)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaxID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Site)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FactoryLevel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FactoryType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bank1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Account1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bank2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Account2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PayTerms)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PayCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Memo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar5)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Acct_no_ar6)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InValidDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                    <td>
+                        @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.FactoryID }) |
+                        @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.FactoryID }) |
+                        @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.FactoryID })
+                    </td>
+                </tr>
+            }
+
+</table>
+    @section scripts
+{
+        <script type="text/javascript">
+            $(function () {
+                $('.pagination>li>a[href]').each(function (i, item) {
+                    var page = $(item).attr('href').replace('/Factory?page=', '');
+                    $(item).attr('href', '#').click(function () { postPage(page); });
+
+                });
+            });
+
+            function postPage(page) {
+                var targetFormId = '#PageList';
+                if ($(targetFormId).size() > 0) {
+                    $('<input>')
+                        .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                        .appendTo($(targetFormId));
+                    $(targetFormId).submit();
+                }
+            };
+        </script>
+    }

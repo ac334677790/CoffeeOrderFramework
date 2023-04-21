@@ -1,0 +1,203 @@
+﻿@*@model IEnumerable<openorderframework.models.company>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.CompanyListViewModel
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+
+<div class="well" id="Search">
+    @using (Html.BeginForm("Index", "Company",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Category:</label>*@
+                @Html.LabelFor(x => x.Companys.FirstOrDefault().CompanyID, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.DropDownListFor(x => x.SearchParameter.CompanyID, (SelectList)Model.CompanyIDs, "-- select item --", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Product Name:</label>*@
+                @Html.LabelFor(x => x.Companys.FirstOrDefault().CompanyName, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+
+
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+                <span></span>
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+            </div>
+        </div>
+    }
+</div>
+    <table class="table">
+        <thead>
+            <tr id="sticker">
+                <th>
+
+                    <div class="btn-group" role="group" aria-label="...">
+
+                        @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                        <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.PagedListPager(Model.Companys,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().ShortName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().Area)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().PhoneCountryCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().PhoneAreaCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().FaxNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().CompanyAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().Site)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().BusinessHourS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().BusinessHourE)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Companys.FirstOrDefault().ModifyDateTime)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+
+            @foreach (var item in Model.Companys)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Area)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneCountryCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneAreaCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FaxNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Site)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BusinessHourS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BusinessHourE)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                    <td>
+                        @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID }) |
+                        @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID }) |
+                        @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID })
+                    </td>
+                </tr>
+            }
+
+</table>
+    @section scripts
+{
+        <script type="text/javascript">
+            $(function () {
+                $('.pagination>li>a[href]').each(function (i, item) {
+                    var page = $(item).attr('href').replace('/Company?page=', '');
+                    $(item).attr('href', '#').click(function () { postPage(page); });
+
+                });
+            });
+
+            function postPage(page) {
+                var targetFormId = '#PageList';
+                if ($(targetFormId).size() > 0) {
+                    $('<input>')
+                        .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                        .appendTo($(targetFormId));
+                    $(targetFormId).submit();
+                }
+            };
+        </script>
+    }

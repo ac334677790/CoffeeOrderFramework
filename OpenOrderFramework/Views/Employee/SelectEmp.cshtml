@@ -1,0 +1,153 @@
+﻿@*@model IEnumerable<openorderframework.models.order_m>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.SelectEmpViewModel
+@{
+    ViewBag.Title = "SelectEmp";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+@*<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>*@
+
+
+@*@*<div class="well" id="Search">
+    @using (Html.BeginForm("SelectEmp", "Order_m",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-4 form-group">
+                @Html.LabelFor(x => x.order_m.OrderNo, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-5">
+                    @Html.EditorFor(x => x.SearchParameter.OrderNo, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                @Html.LabelFor(x => x.order_m.OrderDateTime, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-5">
+                    @Html.EditorFor(x => x.SearchParameter.OrderDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                @Html.LabelFor(x => x.order_m.CustomerID, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-5">
+                    @Html.EditorFor(x => x.SearchParameter.CustomerID, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                @Html.LabelFor(x => x.order_m.CustName, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-5">
+                    @Html.EditorFor(x => x.SearchParameter.CustName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="col-md-4 form-group">
+                @Html.LabelFor(x => x.order_m.DataStatus, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-5">
+                    @Html.DropDownListFor(x => x.SearchParameter.DataStatus, (SelectList)Model.DataStatuses, "-- select item --", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+                <span></span>
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+</div>
+        </div>
+    }
+</div>*@
+
+@*<table class="table">
+    <thead>
+        <tr id="sticker">
+            <th>
+
+                <div class="btn-group" role="group" aria-label="...">
+
+                    @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                    <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td>
+
+
+
+
+
+        </td>
+    </tr>
+</table>*@
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.Employees)
+        {
+            <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 btn-primary table-bordered selectBox">
+                <div id="EmpID">
+                    @Html.DisplayFor(modelItem => item.EmpID)
+                </div>
+                <div id="EmpName">
+                    @Html.DisplayFor(modelItem => item.EmpName)
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('.pagination>li>a[href]').each(function (i, item) {
+                var page = $(item).attr('href').replace('/Order_m?page=', '');
+                $(item).attr('href', '#').click(function () { postPage(page); });
+
+            });
+
+            $('#element').on('click', function (e) {
+                Custombox.open({
+                    target: '#modal',
+                    effect: 'fadein'
+                });
+                e.preventDefault();
+            });
+
+            $('.fancybox').fancybox({ 'width': "80%" });
+
+
+            //浮動th
+            var offset = $('.navbar-collapse').height();
+            $("table").stickyTableHeaders({ fixedOffset: offset });
+
+            $('.selectBox').click(function () {
+                parent.$('#' + url('?EmpID')).val($(this).find('#EmpID').text().trim());
+                parent.$('#' + url('?EmpName')).val($(this).find('#EmpName').text().trim());
+                parent.$('.fancybox-close').click();
+            });
+        });
+
+        function postPage(page) {
+            var targetFormId = '#PageList';
+            if ($(targetFormId).size() > 0) {
+                $('<input>')
+                    .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                    .appendTo($(targetFormId));
+                $(targetFormId).submit();
+            }
+        };
+
+
+
+
+    </script>
+}

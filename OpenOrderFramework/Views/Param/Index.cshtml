@@ -1,0 +1,158 @@
+﻿@*@model IEnumerable<openorderframework.models.param>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.ParamListViewModel
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<div style="text-align:center;display:inline">
+    <h2>@ViewBag.ProgramName <small>@Resources.Common.Index</small></h2>
+</div>
+<div class="well" id="Search">
+    @using (Html.BeginForm("Index", "Param",
+        FormMethod.Post,
+        new { @class = "form-horizontal", role = "form", id = "PageList" }))
+    {
+        <div class="row">
+            <div class="col-md-6 form-group">
+                @*<label class="col-lg-3 control-label">Product Name:</label>*@
+                @Html.LabelFor(x => x.Params.FirstOrDefault().ParaKind, new { @class = "col-lg-3 control-label" })
+                <div class="col-lg-8">
+                    @Html.EditorFor(x => x.SearchParameter.ParaKind, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @*<div class="col-md-6 form-group">
+                    <label class="col-lg-3 control-label">Supplier:</label>
+                    <div class="col-lg-8">
+                        @Html.DropDownListFor(x => x.SearchParameter.Supplier, (SelectList)Model.Suppliers, "-- select item --", new { @class = "form-control" })
+                    </div>
+                </div>*@
+        </div>
+        <span class="clearfix"></span>
+        <div class="row">
+            <div class="col-md-offset-5">
+                <input type="submit" class="btn btn-primary" value=@Resources.Common.Search>
+                <span></span>
+                <input type="reset" class="btn btn-default" value=@Resources.Common.Cancel>
+            </div>
+        </div>
+    }
+</div>
+    <table class="table">
+        <thead>
+            <tr id="sticker">
+                <th>
+
+                    <div class="btn-group" role="group" aria-label="...">
+
+                        @Html.ActionLink(Resources.Common.Create, "Create", "", new { @class = "fancybox fancybox.iframe btn btn-default btn-group btn-sm", role = "group" })
+                        <a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.PagedListPager(Model.Params,
+    page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().Para2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().Para3)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().Para4)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().ParaName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().Modify_YN)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Params.FirstOrDefault().ModifyDateTime)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+
+            @foreach (var item in Model.Params)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Para2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Para3)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Para4)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParaName)
+                    </td>
+                    <td>
+                        @Model.CodeYN[item.Modify_YN]
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CreateUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyUserID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                    </td>*@
+                    <td>
+                        @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.ParaKind + ',' + @item.Para1 }) |
+                        @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.ParaKind + ',' + @item.Para1 }) |
+                        @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.ParaKind + ',' + @item.Para1 })
+                    </td>
+                </tr>
+            }
+
+</table>
+    @section scripts
+{
+        <script type="text/javascript">
+            $(function () {
+                $('.pagination>li>a[href]').each(function (i, item) {
+                    var page = $(item).attr('href').replace('/Param?page=', '');
+                    $(item).attr('href', '#').click(function () { postPage(page); });
+
+                });
+            });
+
+            function postPage(page) {
+                var targetFormId = '#PageList';
+                if ($(targetFormId).size() > 0) {
+                    $('<input>')
+                        .attr({ type: 'hidden', id: 'PageIndex', name: 'PageIndex', value: page })
+                        .appendTo($(targetFormId));
+                    $(targetFormId).submit();
+                }
+            };
+        </script>
+    }

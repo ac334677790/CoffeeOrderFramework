@@ -1,0 +1,189 @@
+﻿@*@model IEnumerable<OpenOrderFramework.Models.Order_d>*@
+@using PagedList.Mvc
+@model OpenOrderFramework.ViewModels.Order_dListViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FacyboxLayout.cshtml";
+}
+
+<div style="text-align:center;display:inline">
+    <h2>訂單單號：@ViewBag.OrderNo <small>@Resources.Common.Index</small></h2>
+</div>
+
+<table class="table">
+    <thead>
+        <tr id="sticker">
+            <th colspan="16">
+                <div class="btn-group" role="group" aria-label="...">
+
+                    @Html.ActionLink(Resources.Common.Create, "Create", new { id = @ViewBag.CompanyID + ',' + @ViewBag.OrderNo }, new { @class = "btn btn-default btn-group btn-sm", role = "group" })
+                    @*<a class="fancybox btn btn-default btn-group btn-sm" href="#Search">查詢</a>*@
+
+                </div>
+            </th>
+        </tr>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.QuoteNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteSeq)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().ProdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().ProdSpec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().Qty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().ProdUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().CostPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().Discount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().Memo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().OrderStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().DataStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_ds.FirstOrDefault().EndCode_YN)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CreateUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreateDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifyUserID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifyDateTime)
+                </th>*@
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        @foreach (var item in Model.Order_ds)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.QuoteNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuoteSeq)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProdName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProdSpec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qty)
+                </td>
+                <td>
+                    @if (@Model.CodeUnit.ContainsKey(item.ProdUnit))
+                    {@Model.CodeUnit[item.ProdUnit] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.ProdUnit)}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CostPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Memo)
+                </td>
+                <td>
+                    @if (@Model.CodeOrderStatus.ContainsKey(item.OrderStatus))
+                    {@Model.CodeOrderStatus[item.OrderStatus] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.DataStatus)}
+                </td>
+                <td>
+                    @if (@Model.CodeDataStatus.ContainsKey(item.DataStatus))
+                    {@Model.CodeDataStatus[item.DataStatus] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.DataStatus)}
+                </td>
+                <td>
+                    @if (@Model.CodeEndCode.ContainsKey(item.EndCode_YN))
+                    {@Model.CodeEndCode[item.EndCode_YN] }
+                    else
+                    {@Html.DisplayFor(modelItem => item.EndCode_YN)}
+                </td>
+                <td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.CreateUserID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreateDateTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModifyUserID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModifyDateTime)
+                        </td>*@
+                <td>
+                    @Html.ActionLink(Resources.Common.Edit, "Edit", new { id = item.CompanyID + ',' + @item.OrderNo + ',' + @item.OrderSeq }) |
+                    @Html.ActionLink(Resources.Common.Details, "Details", new { id = item.CompanyID + ',' + @item.OrderNo + ',' + @item.OrderSeq }) |
+                    @Html.ActionLink(Resources.Common.Delete, "Delete", new { id = item.CompanyID + ',' + @item.OrderNo + ',' + @item.OrderSeq })
+                </td>
+            </tr>
+        }
+
+</table>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('.pagination>li>a[href]').each(function (i, item) {
+                var page = $(item).attr('href').replace('/Order_d?page=', '');
+                $(item).attr('href', '#').click(function () { postPage(page); });
+
+            });
+
+            //浮動th
+            var offset = 0;
+            $("table").stickyTableHeaders({ fixedOffset: offset });
+
+        });
+
+    </script>
+}
